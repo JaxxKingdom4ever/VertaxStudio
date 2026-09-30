@@ -1,0 +1,3 @@
+import type { StudioState } from '../../../packages/studio-model/src/index.js';
+import { validateStudioState } from '../../../packages/studio-model/src/index.js';
+export function renderStatusBar(container:HTMLElement,state:StudioState,extra:readonly string[]=[]):void{const diagnostics=validateStudioState(state);const errors=diagnostics.filter(d=>d.severity==='Error'||d.severity==='Fatal').length;const warnings=diagnostics.filter(d=>d.severity==='Warning').length;container.textContent=`${state.dirty?'● Unsaved':'Saved'} · ${errors} errors · ${warnings} warnings${extra.length?` · ${extra.at(-1)}`:''}`}

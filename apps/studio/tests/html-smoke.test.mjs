@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { readFile } from 'node:fs/promises';
+test('Studio HTML exposes primary IDE mount surfaces',async()=>{const html=await readFile(new URL('../public/index.html',import.meta.url),'utf8');for(const id of ['vertax-studio','project-panel','graph-canvas','inspector-panel','status-bar'])assert.match(html,new RegExp(`id=["']${id}["']`));assert.match(html,/src=["']\/apps\/studio\/src\/main\.js["']/)});

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:022",
+  "name": "superlative: The person is the smallest.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person is the smallest."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The person is the smallest.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "superlative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.person",
+      "quality": "sem:property.small"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "superlative"
+    }
+  ]
+}

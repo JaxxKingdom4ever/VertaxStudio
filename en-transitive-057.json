@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:057",
+  "name": "Productive transitive: The person sees the person.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person sees the person."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The person sees the person."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": false,
+      "object_plural": false
+    }
+  ]
+}

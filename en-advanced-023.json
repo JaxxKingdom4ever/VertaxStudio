@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:023",
+  "name": "comparative: The child is happier than the girl.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The child is happier than the girl."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The child is happier than the girl.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "comparative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.child",
+      "quality": "sem:property.happy",
+      "comparison": "sem:entity.girl"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "comparative"
+    }
+  ]
+}

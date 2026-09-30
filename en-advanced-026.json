@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:026",
+  "name": "adverbial: The woman slowly read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman slowly read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman slowly read the book.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "adverbial"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.book",
+      "manner": "sem:property.slowly"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "adverbial"
+    }
+  ]
+}

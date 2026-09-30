@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:031",
+  "name": "complement: The girl said that the boy cooked the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl said that the boy cooked the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl said that the boy cooked the food.",
+    "rootConcept": "sem:event.say",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "complement"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "complement": "sem:event.cook"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "complement"
+    }
+  ]
+}

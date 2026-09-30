@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:008",
+  "name": "plural-possessive: The children's book is red.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The children's book is red."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The children's book is red.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "possessed-subject"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.book",
+      "quality": "sem:property.red"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "plural-possessive"
+    }
+  ]
+}

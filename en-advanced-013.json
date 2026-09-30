@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:013",
+  "name": "comparative: The girl is taller than the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl is taller than the boy."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl is taller than the boy.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "comparative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.girl",
+      "quality": "sem:property.tall",
+      "comparison": "sem:entity.boy"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "comparative"
+    }
+  ]
+}

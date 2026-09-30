@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:014",
+  "name": "superlative: The girl is the tallest.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl is the tallest."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl is the tallest.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "superlative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.girl",
+      "quality": "sem:property.tall"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "superlative"
+    }
+  ]
+}

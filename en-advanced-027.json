@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:027",
+  "name": "adverbial: The boy quietly bought the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy quietly bought the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy quietly bought the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "adverbial"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.book",
+      "manner": "sem:property.quietly"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "adverbial"
+    }
+  ]
+}

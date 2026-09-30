@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:033",
+  "name": "complement: The woman believed that the boy found the cat.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman believed that the boy found the cat."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman believed that the boy found the cat.",
+    "rootConcept": "sem:event.believe",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "complement"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "complement": "sem:event.find"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "complement"
+    }
+  ]
+}

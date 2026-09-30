@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:043",
+  "name": "Productive transitive: The people see the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The people see the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The people see the dog."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": true,
+      "object_plural": false
+    }
+  ]
+}

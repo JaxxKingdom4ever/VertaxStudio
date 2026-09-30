@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:018",
+  "name": "superlative: The woman is the best.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman is the best."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman is the best.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "superlative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.woman",
+      "quality": "sem:property.good"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "superlative"
+    }
+  ]
+}

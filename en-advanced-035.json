@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:035",
+  "name": "complement: The woman thought that the girl saw the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman thought that the girl saw the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman thought that the girl saw the dog.",
+    "rootConcept": "sem:event.think",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "complement"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "complement": "sem:event.see"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "complement"
+    }
+  ]
+}

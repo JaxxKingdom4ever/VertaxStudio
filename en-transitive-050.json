@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:050",
+  "name": "Productive transitive: The person sees the cats.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person sees the cats."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The person sees the cats."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": false,
+      "object_plural": true
+    }
+  ]
+}

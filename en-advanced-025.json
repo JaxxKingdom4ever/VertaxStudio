@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:025",
+  "name": "adverbial: The girl quickly cooked the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl quickly cooked the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl quickly cooked the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "adverbial"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food",
+      "manner": "sem:property.quickly"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "adverbial"
+    }
+  ]
+}

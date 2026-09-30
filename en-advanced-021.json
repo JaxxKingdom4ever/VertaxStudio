@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:021",
+  "name": "comparative: The person is smaller than the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person is smaller than the boy."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The person is smaller than the boy.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "comparative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.person",
+      "quality": "sem:property.small",
+      "comparison": "sem:entity.boy"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "comparative"
+    }
+  ]
+}

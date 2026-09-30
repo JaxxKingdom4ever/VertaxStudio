@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:034",
+  "name": "complement: The girl said that the woman bought the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl said that the woman bought the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl said that the woman bought the book.",
+    "rootConcept": "sem:event.say",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "complement"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "complement": "sem:event.buy"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "complement"
+    }
+  ]
+}

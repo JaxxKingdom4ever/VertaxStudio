@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:029",
+  "name": "adverbial: The woman quickly saw the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman quickly saw the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman quickly saw the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "adverbial"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.dog",
+      "manner": "sem:property.quickly"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "adverbial"
+    }
+  ]
+}

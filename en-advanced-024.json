@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:024",
+  "name": "superlative: The child is the happiest.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The child is the happiest."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The child is the happiest.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "superlative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.child",
+      "quality": "sem:property.happy"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "superlative"
+    }
+  ]
+}

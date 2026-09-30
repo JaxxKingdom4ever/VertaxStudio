@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:003",
+  "name": "possessive: The boy's book is red.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy's book is red."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy's book is red.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "possessed-subject"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.book",
+      "quality": "sem:property.red"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "possessive"
+    }
+  ]
+}

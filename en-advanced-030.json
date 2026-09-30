@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:030",
+  "name": "adverbial: The boy quietly found the cat.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy quietly found the cat."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy quietly found the cat.",
+    "rootConcept": "sem:event.find",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "adverbial"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.cat",
+      "manner": "sem:property.quietly"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "adverbial"
+    }
+  ]
+}

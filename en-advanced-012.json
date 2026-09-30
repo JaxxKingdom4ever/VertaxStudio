@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:012",
+  "name": "plural-possessive: The women's house is small.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The women's house is small."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The women's house is small.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "possessed-subject"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.house",
+      "quality": "sem:property.small"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "plural-possessive"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:032",
+  "name": "complement: The boy thought that the girl read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy thought that the girl read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy thought that the girl read the book.",
+    "rootConcept": "sem:event.think",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "complement"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "complement": "sem:event.read"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "complement"
+    }
+  ]
+}

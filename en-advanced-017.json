@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:017",
+  "name": "comparative: The woman is better than the girl.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman is better than the girl."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman is better than the girl.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present",
+      "degree": "comparative"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.woman",
+      "quality": "sem:property.good",
+      "comparison": "sem:entity.girl"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "comparative"
+    }
+  ]
+}

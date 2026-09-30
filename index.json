@@ -1,0 +1,18 @@
+[
+  {
+    "id": "english-pack",
+    "path": "english.vertax",
+    "capabilities": [
+      "analyze",
+      "generate"
+    ]
+  },
+  {
+    "id": "reference-conlang",
+    "scope": "examples",
+    "path": "reference-language.vertax",
+    "capabilities": [
+      "generate"
+    ]
+  }
+]

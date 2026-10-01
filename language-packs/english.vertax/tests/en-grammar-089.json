@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:089",
+  "name": "plural-progressive: The girls are cooking the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girls are cooking the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girls are cooking the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "plural-progressive"
+    }
+  ]
+}

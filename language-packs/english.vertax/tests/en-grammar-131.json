@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:131",
+  "name": "pronoun: She built the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "She built the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "She built the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.she",
+      "theme": "sem:entity.house"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun"
+    }
+  ]
+}

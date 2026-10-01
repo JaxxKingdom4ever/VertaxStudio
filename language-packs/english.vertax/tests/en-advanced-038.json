@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:038",
+  "name": "relative: The boy who read the book saw the girl.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy who read the book saw the girl."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy who read the book saw the girl.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "relative-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.girl"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "relative"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:058",
+  "name": "perfect: The woman has bought the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman has bought the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman has bought the house.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.house"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "perfect"
+    }
+  ]
+}

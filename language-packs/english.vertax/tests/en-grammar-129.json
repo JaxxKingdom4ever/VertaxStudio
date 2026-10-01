@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:129",
+  "name": "pronoun: She wrote the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "She wrote the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "She wrote the book.",
+    "rootConcept": "sem:event.write",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.she",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:045",
+  "name": "perfect-progressive: The girl has been cooking the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl has been cooking the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl has been cooking the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "perfect-progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "perfect-progressive"
+    }
+  ]
+}

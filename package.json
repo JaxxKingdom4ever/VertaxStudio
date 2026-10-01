@@ -1,0 +1,17 @@
+{
+  "name": "vertax",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "test": "npm run build && find packages apps examples language-packs -name '*.test.mjs' -print0 2>/dev/null | xargs -0 -r node --test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "npm run build && node dist/apps/cli/src/main.js compile",
+    "studio:build": "npm run build && node apps/studio/build.mjs",
+    "studio": "npm run studio:build && node apps/studio/server.mjs"
+  }
+}

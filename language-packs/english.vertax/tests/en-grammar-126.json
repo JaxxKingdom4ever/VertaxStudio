@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:126",
+  "name": "pronoun: She bought the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "She bought the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "She bought the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.she",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun"
+    }
+  ]
+}

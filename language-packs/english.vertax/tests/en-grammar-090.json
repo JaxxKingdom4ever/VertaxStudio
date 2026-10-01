@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:090",
+  "name": "plural-progressive: The girls are reading the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girls are reading the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girls are reading the food.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "plural-progressive"
+    }
+  ]
+}

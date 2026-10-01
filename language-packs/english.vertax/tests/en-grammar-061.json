@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:061",
+  "name": "question: Does the woman buy the house?",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "Does the woman buy the house?"
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "Does the woman buy the house?",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "question": "yesno"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.house"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "question"
+    }
+  ]
+}

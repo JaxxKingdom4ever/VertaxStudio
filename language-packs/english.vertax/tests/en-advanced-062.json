@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:062",
+  "name": "future-perfect: The girl will have seen the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl will have seen the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl will have seen the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "future",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.dog"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "future-perfect"
+    }
+  ]
+}

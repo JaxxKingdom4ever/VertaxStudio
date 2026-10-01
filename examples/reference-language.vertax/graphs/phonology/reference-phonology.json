@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "stage": "Phonology",
+  "graph": {
+    "id": "reference-phonology",
+    "nodes": [
+      {
+        "id": "realize",
+        "typeId": "phon.from-morphs",
+        "params": {}
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "reference-phonology-rule",
+      "stage": "Phonology",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphSequence"
+      },
+      "graphId": "reference-phonology",
+      "priority": 100,
+      "fallback": false
+    }
+  ]
+}

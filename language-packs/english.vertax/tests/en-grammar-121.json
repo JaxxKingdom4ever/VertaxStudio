@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:121",
+  "name": "coordination: The boy and the person find the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy and the person find the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy and the person find the book.",
+    "rootConcept": "sem:event.find",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "coordinated"
+    },
+    "roleConcepts": {
+      "agent": "sem:group.coordination",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {
+      "agent": "Group"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "coordination"
+    }
+  ]
+}

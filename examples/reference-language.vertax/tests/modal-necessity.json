@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "modal-necessity",
+  "name": "modal necessity",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "must"
+    ],
+    "objects": {
+      "agent": {
+        "id": "agent",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "cook": {
+        "id": "cook",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "agent"
+          ],
+          "theme": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "tense": "present"
+          }
+        }
+      },
+      "must": {
+        "id": "must",
+        "type": "Modality",
+        "conceptId": "sem:modality.necessity",
+        "roles": {
+          "scope": [
+            "cook"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "yudek person cook food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

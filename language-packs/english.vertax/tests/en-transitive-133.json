@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:133",
+  "name": "Productive transitive: The man saw the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The man saw the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The man saw the book."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "past",
+      "subject_plural": false,
+      "object_plural": false
+    }
+  ]
+}

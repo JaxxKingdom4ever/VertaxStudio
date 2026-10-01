@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:040",
+  "name": "relative: The girl who found the cat saw the woman.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl who found the cat saw the woman."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl who found the cat saw the woman.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "relative-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.woman"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "relative"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:024",
+  "name": "Productive transitive: The people saw the houses.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The people saw the houses."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The people saw the houses."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "past",
+      "subject_plural": true,
+      "object_plural": true
+    }
+  ]
+}

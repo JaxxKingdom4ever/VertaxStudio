@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:113",
+  "name": "Productive transitive: The girl sees the cat.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl sees the cat."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The girl sees the cat."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": false,
+      "object_plural": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:136",
+  "name": "ditransitive: The boy showed the girl the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy showed the girl the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy showed the girl the book.",
+    "rootConcept": "sem:event.show",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "recipient": "sem:entity.girl",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "ditransitive"
+    }
+  ]
+}

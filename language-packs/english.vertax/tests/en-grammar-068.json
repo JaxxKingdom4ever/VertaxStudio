@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:068",
+  "name": "progressive: The girl is seeing the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl is seeing the boy."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl is seeing the boy.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "progressive"
+    }
+  ]
+}

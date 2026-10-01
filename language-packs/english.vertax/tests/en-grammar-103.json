@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:103",
+  "name": "copula: The person is good.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person is good."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The person is good.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.person",
+      "quality": "sem:property.good"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "copula"
+    }
+  ]
+}

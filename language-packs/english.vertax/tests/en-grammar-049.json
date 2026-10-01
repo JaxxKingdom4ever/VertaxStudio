@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:049",
+  "name": "past-negation: The girl did not buy the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl did not buy the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl did not buy the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "polarity": "negative"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "past-negation"
+    }
+  ]
+}

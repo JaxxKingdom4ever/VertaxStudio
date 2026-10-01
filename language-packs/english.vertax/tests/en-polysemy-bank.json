@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test:en:polysemy:bank",
+  "name": "bank: distinct financial versus river sense",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person saw the bank."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 2
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "lexical-polysemy"
+    }
+  ]
+}

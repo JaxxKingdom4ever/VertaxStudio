@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:049",
+  "name": "past-perfect: The boy had read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy had read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy had read the book.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "past-perfect"
+    }
+  ]
+}

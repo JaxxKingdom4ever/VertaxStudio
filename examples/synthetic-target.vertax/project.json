@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "id": "synthetic-target-test-fixture",
+  "name": "Synthetic VOS target (test fixture only)",
+  "version": "0.1.0",
+  "default_language": "x-vertax-fixture",
+  "graphs": {
+    "Grammar": [
+      "graphs/grammar/synthetic-grammar.json"
+    ],
+    "Morphology": [
+      "graphs/morphology/synthetic-morphology.json"
+    ],
+    "Surface": [
+      "graphs/surface/synthetic-surface.json"
+    ]
+  },
+  "lexicons": [
+    "lexicon/lexicon.json"
+  ],
+  "features": [
+    "features/features.json"
+  ],
+  "concepts": [
+    "concepts/concepts.json"
+  ],
+  "tables": [],
+  "node_groups": [],
+  "tests": [],
+  "settings": "settings.json",
+  "layouts": [],
+  "dependencies": [],
+  "language": {
+    "tag": "x-vertax-fixture",
+    "display_name": "Synthetic fixture",
+    "autonym": "Synthetic fixture",
+    "direction": "ltr",
+    "capabilities": [
+      "generate"
+    ]
+  }
+}

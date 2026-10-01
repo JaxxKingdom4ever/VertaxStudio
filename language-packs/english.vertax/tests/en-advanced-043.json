@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:043",
+  "name": "past-perfect: The girl had cooked the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl had cooked the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl had cooked the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "past-perfect"
+    }
+  ]
+}

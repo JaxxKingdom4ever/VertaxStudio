@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "comparison-possessed-second",
+  "name": "comparison possessed second (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "compare"
+    ],
+    "objects": {
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "owner"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "tall": {
+        "id": "tall",
+        "type": "Property",
+        "conceptId": "sem:property.tall",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "owner": {
+        "id": "owner",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "compare": {
+        "id": "compare",
+        "type": "Relation",
+        "conceptId": "sem:relation.comparison",
+        "roles": {
+          "first": [
+            "person"
+          ],
+          "property": [
+            "tall"
+          ],
+          "second": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "degree": "more"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person'pu ⟦TALL⟧ ko'lez lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

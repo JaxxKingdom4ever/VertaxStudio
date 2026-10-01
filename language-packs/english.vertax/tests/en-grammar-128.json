@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:128",
+  "name": "pronoun: She found the cat.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "She found the cat."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "She found the cat.",
+    "rootConcept": "sem:event.find",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.she",
+      "theme": "sem:entity.cat"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun"
+    }
+  ]
+}

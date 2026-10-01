@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:137",
+  "name": "ditransitive: The woman offered the boy the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman offered the boy the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman offered the boy the food.",
+    "rootConcept": "sem:event.offer",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "recipient": "sem:entity.boy",
+      "theme": "sem:entity.food"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "ditransitive"
+    }
+  ]
+}

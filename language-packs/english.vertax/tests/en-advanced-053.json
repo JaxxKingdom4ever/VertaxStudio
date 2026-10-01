@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:053",
+  "name": "pronoun-he: He read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "He read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "He read the book.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.he",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-he"
+    }
+  ]
+}

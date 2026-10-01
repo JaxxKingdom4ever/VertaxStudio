@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:112",
+  "name": "attributive-modifier: The busy woman wrote the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The busy woman wrote the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The busy woman wrote the book.",
+    "rootConcept": "sem:event.write",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "modified-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "attributive-modifier"
+    }
+  ]
+}

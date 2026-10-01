@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "coordination-contrast-clauses",
+  "name": "coordination contrast clauses (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "coord"
+    ],
+    "objects": {
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book": {
+        "id": "book",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "first": {
+        "id": "first",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "person"
+          ],
+          "theme": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "tense": "present"
+          }
+        }
+      },
+      "second": {
+        "id": "second",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "person"
+          ],
+          "theme": [
+            "book"
+          ]
+        },
+        "features": {
+          "values": {
+            "tense": "present"
+          }
+        }
+      },
+      "coord": {
+        "id": "coord",
+        "type": "SemanticList",
+        "conceptId": "sem:list.coordination",
+        "roles": {
+          "members": [
+            "first",
+            "second"
+          ]
+        },
+        "features": {
+          "values": {
+            "mode": "contrast"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person cook food ⟦BUT⟧'person cook lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

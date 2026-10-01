@@ -1,0 +1,107 @@
+{
+  "schema_version": 2,
+  "id": "reference-conlang-recovery",
+  "name": "Reference conlang (recovery subset)",
+  "version": "0.1.0",
+  "default_language": "x-vertax-reference",
+  "graphs": {
+    "Grammar": [
+      "graphs/grammar/reference-grammar.json"
+    ],
+    "Morphology": [
+      "graphs/morphology/reference-morphology.json"
+    ],
+    "Phonology": [
+      "graphs/phonology/reference-phonology.json"
+    ],
+    "Surface": [
+      "graphs/surface/reference-surface.json"
+    ]
+  },
+  "lexicons": [
+    "lexicon/lexicon.json"
+  ],
+  "features": [
+    "features/features.json"
+  ],
+  "concepts": [
+    "concepts/concepts.json"
+  ],
+  "tables": [],
+  "node_groups": [
+    "node-groups/reference-clause.json"
+  ],
+  "tests": [
+    "tests/question-continuous.json",
+    "tests/statement-present.json",
+    "tests/statement-continuous.json",
+    "tests/statement-complete.json",
+    "tests/statement-past.json",
+    "tests/statement-future.json",
+    "tests/statement-negative.json",
+    "tests/question-agent.json",
+    "tests/statement-progressive.json",
+    "tests/statement-perfect.json",
+    "tests/question-object.json",
+    "tests/question-polar.json",
+    "tests/pronoun-he.json",
+    "tests/pronoun-she.json",
+    "tests/pronoun-they.json",
+    "tests/pronoun-we.json",
+    "tests/pronoun-it.json",
+    "tests/pronoun-you.json",
+    "tests/pronoun-first_person.json",
+    "tests/imperative-put.json",
+    "tests/possessive-one.json",
+    "tests/possessive-two.json",
+    "tests/possessive-three.json",
+    "tests/possessive-four.json",
+    "tests/possessive-five.json",
+    "tests/possessive-six.json",
+    "tests/imperative-possessive.json",
+    "tests/declarative-possessive.json",
+    "tests/modal-necessity.json",
+    "tests/modal-stacked.json",
+    "tests/complement-basic.json",
+    "tests/complement-nested.json",
+    "tests/complement-negative.json",
+    "tests/complement-past.json",
+    "tests/condition-personal.json",
+    "tests/condition-impersonal.json",
+    "tests/condition-negative.json",
+    "tests/condition-negative-consequence.json",
+    "tests/condition-negative-impersonal.json",
+    "tests/condition-past.json",
+    "tests/condition-possessed-subject.json",
+    "tests/condition-nested.json",
+    "tests/complement-conditional.json",
+    "tests/coordination-add-three.json",
+    "tests/coordination-add-four.json",
+    "tests/coordination-add-possession.json",
+    "tests/coordination-add-nested.json",
+    "tests/coordination-alternative-two.json",
+    "tests/coordination-alternative-three.json",
+    "tests/coordination-contrast-clauses.json",
+    "tests/coordination-contrast-three.json",
+    "tests/comparison-more.json",
+    "tests/comparison-less.json",
+    "tests/comparison-equal.json",
+    "tests/comparison-possessed-first.json",
+    "tests/comparison-possessed-second.json",
+    "tests/comparison-coordinated-second.json",
+    "tests/superlative-highest.json",
+    "tests/superlative-lowest.json"
+  ],
+  "settings": "settings.json",
+  "layouts": [],
+  "dependencies": [],
+  "language": {
+    "tag": "x-vertax-reference",
+    "display_name": "Reference conlang recovery subset",
+    "autonym": "Reference conlang",
+    "direction": "ltr",
+    "capabilities": [
+      "generate"
+    ]
+  }
+}

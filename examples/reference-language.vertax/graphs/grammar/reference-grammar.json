@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "stage": "Grammar",
+  "graph": {
+    "id": "reference-grammar",
+    "nodes": [
+      {
+        "id": "realize-clause",
+        "typeId": "node-group:reference-clause",
+        "params": {}
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize-clause",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize-clause",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "reference-grammar-rule",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Event"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    },
+    {
+      "id": "reference-grammar-entity",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Entity"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    },
+    {
+      "id": "reference-grammar-modality",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Modality"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    },
+    {
+      "id": "reference-grammar-relation",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Relation"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    },
+    {
+      "id": "reference-grammar-semanticlist",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "SemanticList"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    },
+    {
+      "id": "reference-grammar-property",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Property"
+      },
+      "graphId": "reference-grammar",
+      "priority": 100,
+      "fallback": false
+    }
+  ]
+}

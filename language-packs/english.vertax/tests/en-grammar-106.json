@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:106",
+  "name": "copula: The dog is small.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The dog is small."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The dog is small.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.dog",
+      "quality": "sem:property.small"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "copula"
+    }
+  ]
+}

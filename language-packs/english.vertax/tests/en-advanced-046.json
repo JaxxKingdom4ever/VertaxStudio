@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:046",
+  "name": "indefinite-determiner: A girl cooked the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "A girl cooked the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "A girl cooked the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.food"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "indefinite-determiner"
+    }
+  ]
+}

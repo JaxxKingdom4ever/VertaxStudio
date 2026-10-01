@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:138",
+  "name": "Productive transitive: The man sees the foods.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The man sees the foods."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The man sees the foods."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": false,
+      "object_plural": true
+    }
+  ]
+}

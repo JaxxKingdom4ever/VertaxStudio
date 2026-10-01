@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:120",
+  "name": "coordination: The girl and the woman see the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl and the woman see the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl and the woman see the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "coordinated"
+    },
+    "roleConcepts": {
+      "agent": "sem:group.coordination",
+      "theme": "sem:entity.dog"
+    },
+    "roleTypes": {
+      "agent": "Group"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "coordination"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:047",
+  "name": "pronoun-he: He cooked the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "He cooked the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "He cooked the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.he",
+      "theme": "sem:entity.food"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-he"
+    }
+  ]
+}

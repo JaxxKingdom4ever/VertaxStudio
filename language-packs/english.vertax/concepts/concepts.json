@@ -1,0 +1,4604 @@
+[
+  {
+    "id": "sem:entity.abscess",
+    "label": "abscess",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.account",
+    "label": "account",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.act",
+    "label": "act",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.action",
+    "label": "action",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.activity",
+    "label": "activity",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.administration",
+    "label": "administration",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.affair",
+    "label": "affair",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.age",
+    "label": "age",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.aid",
+    "label": "aid",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.aim",
+    "label": "aim",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.air",
+    "label": "air",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.answer",
+    "label": "answer",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.anyone",
+    "label": "anyone",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.anything",
+    "label": "anything",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.appearance",
+    "label": "appearance",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.area",
+    "label": "area",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.arm",
+    "label": "arm",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.army",
+    "label": "army",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.artery",
+    "label": "artery",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.attack",
+    "label": "attack",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.attention",
+    "label": "attention",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.ball",
+    "label": "ball",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.bank.financial",
+    "label": "financial bank",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.bank.river",
+    "label": "river bank",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.battle",
+    "label": "battle",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.bed",
+    "label": "bed",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.blood",
+    "label": "blood",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.body",
+    "label": "body",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.bone",
+    "label": "bone",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.book",
+    "label": "book",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.boy",
+    "label": "boy",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.bridge",
+    "label": "bridge",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.brother",
+    "label": "brother",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.business",
+    "label": "business",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.camp",
+    "label": "camp",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.campaign",
+    "label": "campaign",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.can",
+    "label": "can",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.cancer",
+    "label": "cancer",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.capital",
+    "label": "capital",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.captain",
+    "label": "captain",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.care",
+    "label": "care",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.carriage",
+    "label": "carriage",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.case",
+    "label": "case",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.cat",
+    "label": "cat",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.cause",
+    "label": "cause",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.chair",
+    "label": "chair",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.change",
+    "label": "change",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.chapter",
+    "label": "chapter",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.character",
+    "label": "character",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.child",
+    "label": "child",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.church",
+    "label": "church",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.city",
+    "label": "city",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.clock",
+    "label": "clock",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.coat",
+    "label": "coat",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.colonel",
+    "label": "colonel",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.command",
+    "label": "command",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.commander",
+    "label": "commander",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.commerce",
+    "label": "commerce",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.company",
+    "label": "company",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.condition",
+    "label": "condition",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.congress",
+    "label": "congress",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.constitution",
+    "label": "constitution",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.control",
+    "label": "control",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.convention",
+    "label": "convention",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.conversation",
+    "label": "conversation",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.cook",
+    "label": "cook",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.corner",
+    "label": "corner",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.count",
+    "label": "count",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.countess",
+    "label": "countess",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.country",
+    "label": "country",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.course",
+    "label": "course",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.court",
+    "label": "court",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.crowd",
+    "label": "crowd",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.cry",
+    "label": "cry",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.danger",
+    "label": "danger",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.daughter",
+    "label": "daughter",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.day",
+    "label": "day",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.death",
+    "label": "death",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.destruction",
+    "label": "destruction",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.development",
+    "label": "development",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.diagnosis",
+    "label": "diagnosis",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.difficulty",
+    "label": "difficulty",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.dinner",
+    "label": "dinner",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.direction",
+    "label": "direction",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.disease",
+    "label": "disease",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.distance",
+    "label": "distance",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.division",
+    "label": "division",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.doctor",
+    "label": "doctor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.dog",
+    "label": "dog",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.door",
+    "label": "door",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.doubt",
+    "label": "doubt",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.dress",
+    "label": "dress",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.dressing",
+    "label": "dressing",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.duty",
+    "label": "duty",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.earth",
+    "label": "earth",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.effect",
+    "label": "effect",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.effort",
+    "label": "effort",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.election",
+    "label": "election",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.emperor",
+    "label": "emperor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.end",
+    "label": "end",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.enemy",
+    "label": "enemy",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.evening",
+    "label": "evening",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.event",
+    "label": "event",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.everybody",
+    "label": "everybody",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.everyone",
+    "label": "everyone",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.everything",
+    "label": "everything",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.example",
+    "label": "example",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.experience",
+    "label": "experience",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.expression",
+    "label": "expression",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.eye",
+    "label": "eye",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.face",
+    "label": "face",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fact",
+    "label": "fact",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fall",
+    "label": "fall",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.family",
+    "label": "family",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.father",
+    "label": "father",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fear",
+    "label": "fear",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.feeling",
+    "label": "feeling",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fellow",
+    "label": "fellow",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.field",
+    "label": "field",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fig",
+    "label": "fig",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.finger",
+    "label": "finger",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.fire",
+    "label": "fire",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.firm",
+    "label": "firm",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.floor",
+    "label": "floor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.food",
+    "label": "food",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.foot",
+    "label": "foot",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.force",
+    "label": "force",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.form",
+    "label": "form",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.formation",
+    "label": "formation",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.freedom",
+    "label": "freedom",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.friend",
+    "label": "friend",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.front",
+    "label": "front",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.future",
+    "label": "future",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.girl",
+    "label": "girl",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.glass",
+    "label": "glass",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.god",
+    "label": "god",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.gold",
+    "label": "gold",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.government",
+    "label": "government",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.governor",
+    "label": "governor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.ground",
+    "label": "ground",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.group",
+    "label": "group",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.growth",
+    "label": "growth",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hair",
+    "label": "hair",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.half",
+    "label": "half",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hand",
+    "label": "hand",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.happiness",
+    "label": "happiness",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hat",
+    "label": "hat",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.he",
+    "label": "he",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.head",
+    "label": "head",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.healing",
+    "label": "healing",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.health",
+    "label": "health",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.heart",
+    "label": "heart",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.her",
+    "label": "her",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.herself",
+    "label": "herself",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hill",
+    "label": "hill",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.him",
+    "label": "him",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.himself",
+    "label": "himself",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.history",
+    "label": "history",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.home",
+    "label": "home",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.honor",
+    "label": "honor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hope",
+    "label": "hope",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.horse",
+    "label": "horse",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.hour",
+    "label": "hour",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.house",
+    "label": "house",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.husband",
+    "label": "husband",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.idea",
+    "label": "idea",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.illustration",
+    "label": "illustration",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.importance",
+    "label": "importance",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.increase",
+    "label": "increase",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.independence",
+    "label": "independence",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.industry",
+    "label": "industry",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.infection",
+    "label": "infection",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.influence",
+    "label": "influence",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.injury",
+    "label": "injury",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.interest",
+    "label": "interest",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.it",
+    "label": "it",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.itself",
+    "label": "itself",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.john",
+    "label": "john",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.kind",
+    "label": "kind",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.king",
+    "label": "king",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.knee",
+    "label": "knee",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.labor",
+    "label": "labor",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.lady",
+    "label": "lady",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.land",
+    "label": "land",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.latter",
+    "label": "latter",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.law",
+    "label": "law",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.leg",
+    "label": "leg",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.letter",
+    "label": "letter",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.life",
+    "label": "life",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.light",
+    "label": "light",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.limb",
+    "label": "limb",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.line",
+    "label": "line",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.listener",
+    "label": "you",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.lord",
+    "label": "lord",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.loss",
+    "label": "loss",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.love",
+    "label": "love",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.lymph",
+    "label": "lymph",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.majority",
+    "label": "majority",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.man",
+    "label": "man",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.manner",
+    "label": "manner",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.march",
+    "label": "march",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.master",
+    "label": "master",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.matter",
+    "label": "matter",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.me",
+    "label": "me",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.meaning",
+    "label": "meaning",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.meeting",
+    "label": "meeting",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.membrane",
+    "label": "membrane",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.method",
+    "label": "method",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.middle",
+    "label": "middle",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.mind",
+    "label": "mind",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.moment",
+    "label": "moment",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.money",
+    "label": "money",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.morning",
+    "label": "morning",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.mother",
+    "label": "mother",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.mouth",
+    "label": "mouth",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.movement",
+    "label": "movement",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.muscle",
+    "label": "muscle",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.myself",
+    "label": "myself",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.name",
+    "label": "name",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.nation",
+    "label": "nation",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.nature",
+    "label": "nature",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.neck",
+    "label": "neck",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.need",
+    "label": "need",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.nerve",
+    "label": "nerve",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.news",
+    "label": "news",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.night",
+    "label": "night",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.none",
+    "label": "none",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.note",
+    "label": "note",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.nothing",
+    "label": "nothing",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.number",
+    "label": "number",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.office",
+    "label": "office",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.officer",
+    "label": "officer",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.opening",
+    "label": "opening",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.operation",
+    "label": "operation",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.opinion",
+    "label": "opinion",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.order",
+    "label": "order",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.pain",
+    "label": "pain",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.paper",
+    "label": "paper",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.part",
+    "label": "part",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.party",
+    "label": "party",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.passage",
+    "label": "passage",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.patient",
+    "label": "patient",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.peace",
+    "label": "peace",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.period",
+    "label": "period",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.person",
+    "label": "person",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.place",
+    "label": "place",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.plan",
+    "label": "plan",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.pleasure",
+    "label": "pleasure",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.point",
+    "label": "point",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.policy",
+    "label": "policy",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.portion",
+    "label": "portion",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.position",
+    "label": "position",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.post",
+    "label": "post",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.power",
+    "label": "power",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.presence",
+    "label": "presence",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.president",
+    "label": "president",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.pressure",
+    "label": "pressure",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.prince",
+    "label": "prince",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.princess",
+    "label": "princess",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.process",
+    "label": "process",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.project",
+    "label": "project",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.property",
+    "label": "property",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.purpose",
+    "label": "purpose",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.question",
+    "label": "question",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.re",
+    "label": "re",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.reading",
+    "label": "reading",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.reason",
+    "label": "reason",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.regiment",
+    "label": "regiment",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.region",
+    "label": "region",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.relation",
+    "label": "relation",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.removal",
+    "label": "removal",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.reply",
+    "label": "reply",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.rest",
+    "label": "rest",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.result",
+    "label": "result",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.return",
+    "label": "return",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.revolution",
+    "label": "revolution",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.right",
+    "label": "right",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.rise",
+    "label": "rise",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.river",
+    "label": "river",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.road",
+    "label": "road",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.room",
+    "label": "room",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.round",
+    "label": "round",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.rule",
+    "label": "rule",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.sarcoma",
+    "label": "sarcoma",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.saw",
+    "label": "saw",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.seat",
+    "label": "seat",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.section",
+    "label": "section",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.self",
+    "label": "self",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.senate",
+    "label": "senate",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.series",
+    "label": "series",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.service",
+    "label": "service",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.she",
+    "label": "she",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.shoulder",
+    "label": "shoulder",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.show",
+    "label": "show",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.side",
+    "label": "side",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.sight",
+    "label": "sight",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.silence",
+    "label": "silence",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.silver",
+    "label": "silver",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.sir",
+    "label": "sir",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.sister",
+    "label": "sister",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.size",
+    "label": "size",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.skin",
+    "label": "skin",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.slavery",
+    "label": "slavery",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.smile",
+    "label": "smile",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.smoke",
+    "label": "smoke",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.society",
+    "label": "society",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.soldier",
+    "label": "soldier",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.solution",
+    "label": "solution",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.someone",
+    "label": "someone",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.something",
+    "label": "something",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.son",
+    "label": "son",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.soul",
+    "label": "soul",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.sound",
+    "label": "sound",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.speaker",
+    "label": "i",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.spirit",
+    "label": "spirit",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.spite",
+    "label": "spite",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.spread",
+    "label": "spread",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.st",
+    "label": "st",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.staff",
+    "label": "staff",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.stage",
+    "label": "stage",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.state",
+    "label": "state",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.step",
+    "label": "step",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.story",
+    "label": "story",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.street",
+    "label": "street",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.strength",
+    "label": "strength",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.study",
+    "label": "study",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.subject",
+    "label": "subject",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.suffrage",
+    "label": "suffrage",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.surface",
+    "label": "surface",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.surprise",
+    "label": "surprise",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.system",
+    "label": "system",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.table",
+    "label": "table",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.tariff",
+    "label": "tariff",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.tea",
+    "label": "tea",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.telescope",
+    "label": "telescope",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.term",
+    "label": "term",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.territory",
+    "label": "territory",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.them",
+    "label": "them",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.themselves",
+    "label": "themselves",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.they",
+    "label": "they",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.thing",
+    "label": "thing",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.time",
+    "label": "time",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.tissue",
+    "label": "tissue",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.tomorrow",
+    "label": "tomorrow",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.tone",
+    "label": "tone",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.town",
+    "label": "town",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.trade",
+    "label": "trade",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.treatment",
+    "label": "treatment",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.treaty",
+    "label": "treaty",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.truth",
+    "label": "truth",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.ulcer",
+    "label": "ulcer",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.uncle",
+    "label": "uncle",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.uniform",
+    "label": "uniform",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.union",
+    "label": "union",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.unknown",
+    "label": "unknown/question argument",
+    "semanticType": "Unknown",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.us",
+    "label": "us",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.use",
+    "label": "use",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.value",
+    "label": "value",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.vein",
+    "label": "vein",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.vessel",
+    "label": "vessel",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.victory",
+    "label": "victory",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.view",
+    "label": "view",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.village",
+    "label": "village",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.voice",
+    "label": "voice",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.vote",
+    "label": "vote",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.wall",
+    "label": "wall",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.war",
+    "label": "war",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.water",
+    "label": "water",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.way",
+    "label": "way",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.we",
+    "label": "we",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.west",
+    "label": "west",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.what",
+    "label": "what",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.who",
+    "label": "who",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.whom",
+    "label": "whom",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.wife",
+    "label": "wife",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.window",
+    "label": "window",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.woman",
+    "label": "woman",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.word",
+    "label": "word",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.work",
+    "label": "work",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.world",
+    "label": "world",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.wound",
+    "label": "wound",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.year",
+    "label": "year",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.yourself",
+    "label": "yourself",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.appear",
+    "label": "appear",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.ask",
+    "label": "ask",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.be",
+    "label": "be",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.become",
+    "label": "become",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.believe",
+    "label": "believe",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.book",
+    "label": "book",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.bring",
+    "label": "bring",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.build",
+    "label": "build",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.buy",
+    "label": "buy",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.call",
+    "label": "call",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.close",
+    "label": "close",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.come",
+    "label": "come",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.cook",
+    "label": "cook",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.cut",
+    "label": "cut",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.do",
+    "label": "do",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.don",
+    "label": "don",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.eat",
+    "label": "eat",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.enter",
+    "label": "enter",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.explain",
+    "label": "explain",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.feel",
+    "label": "feel",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.find",
+    "label": "find",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.follow",
+    "label": "follow",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.get",
+    "label": "get",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.give",
+    "label": "give",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.go",
+    "label": "go",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.have",
+    "label": "have",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.hear",
+    "label": "hear",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.help",
+    "label": "help",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.hold",
+    "label": "hold",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.keep",
+    "label": "keep",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.know",
+    "label": "know",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.lead",
+    "label": "lead",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.leave",
+    "label": "leave",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.let",
+    "label": "let",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.live",
+    "label": "live",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.look",
+    "label": "look",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.make",
+    "label": "make",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.meet",
+    "label": "meet",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.miss",
+    "label": "miss",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.occur",
+    "label": "occur",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.offer",
+    "label": "offer",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.pass",
+    "label": "pass",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.pay",
+    "label": "pay",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.please",
+    "label": "please",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.prevent",
+    "label": "prevent",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.produce",
+    "label": "produce",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.put",
+    "label": "put",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.read",
+    "label": "read",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.remain",
+    "label": "remain",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.remember",
+    "label": "remember",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.run",
+    "label": "run",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.save",
+    "label": "save",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.say",
+    "label": "say",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.see",
+    "label": "see",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.seem",
+    "label": "seem",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.send",
+    "label": "send",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.show",
+    "label": "show",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.sleep",
+    "label": "sleep",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.speak",
+    "label": "speak",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.take",
+    "label": "take",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.talk",
+    "label": "talk",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.teach",
+    "label": "teach",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.tell",
+    "label": "tell",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.thank",
+    "label": "thank",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.think",
+    "label": "think",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.turn",
+    "label": "turn",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.understand",
+    "label": "understand",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.wait",
+    "label": "wait",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.write",
+    "label": "write",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.a",
+    "label": "a",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.about",
+    "label": "about",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.above",
+    "label": "above",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.across",
+    "label": "across",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.after",
+    "label": "after",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.against",
+    "label": "against",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.all",
+    "label": "all",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.along",
+    "label": "along",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.although",
+    "label": "although",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.among",
+    "label": "among",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.an",
+    "label": "an",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.and",
+    "label": "and",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.another",
+    "label": "another",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.any",
+    "label": "any",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.around",
+    "label": "around",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.as",
+    "label": "as",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.at",
+    "label": "at",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.because",
+    "label": "because",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.before",
+    "label": "before",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.behind",
+    "label": "behind",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.below",
+    "label": "below",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.beside",
+    "label": "beside",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.besides",
+    "label": "besides",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.between",
+    "label": "between",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.beyond",
+    "label": "beyond",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.both",
+    "label": "both",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.but",
+    "label": "but",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.by",
+    "label": "by",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.can",
+    "label": "can",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.cannot",
+    "label": "cannot",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.could",
+    "label": "could",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.during",
+    "label": "during",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.each",
+    "label": "each",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.eight",
+    "label": "eight",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.either",
+    "label": "either",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.every",
+    "label": "every",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.except",
+    "label": "except",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.five",
+    "label": "five",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.for",
+    "label": "for",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.forty",
+    "label": "forty",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.four",
+    "label": "four",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.from",
+    "label": "from",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.his",
+    "label": "his",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.hundred",
+    "label": "hundred",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.if",
+    "label": "if",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.in",
+    "label": "in",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.into",
+    "label": "into",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.like",
+    "label": "like",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.may",
+    "label": "may",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.might",
+    "label": "might",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.must",
+    "label": "must",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.my",
+    "label": "my",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.near",
+    "label": "near",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.neither",
+    "label": "neither",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.no",
+    "label": "no",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.nor",
+    "label": "nor",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.not",
+    "label": "not",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.of",
+    "label": "of",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.off",
+    "label": "off",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.on",
+    "label": "on",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.one",
+    "label": "one",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.or",
+    "label": "or",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.ought",
+    "label": "ought",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.our",
+    "label": "our",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.out",
+    "label": "out",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.outside",
+    "label": "outside",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.over",
+    "label": "over",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.seven",
+    "label": "seven",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.shall",
+    "label": "shall",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.should",
+    "label": "should",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.since",
+    "label": "since",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.six",
+    "label": "six",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.some",
+    "label": "some",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.ten",
+    "label": "ten",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.than",
+    "label": "than",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.that",
+    "label": "that",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.the",
+    "label": "the",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.their",
+    "label": "their",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.these",
+    "label": "these",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.thirty",
+    "label": "thirty",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.this",
+    "label": "this",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.those",
+    "label": "those",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.though",
+    "label": "though",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.thousand",
+    "label": "thousand",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.three",
+    "label": "three",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.through",
+    "label": "through",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.till",
+    "label": "till",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.to",
+    "label": "to",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.toward",
+    "label": "toward",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.twenty",
+    "label": "twenty",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.two",
+    "label": "two",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.under",
+    "label": "under",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.until",
+    "label": "until",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.up",
+    "label": "up",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.upon",
+    "label": "upon",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.whatever",
+    "label": "whatever",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.whether",
+    "label": "whether",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.which",
+    "label": "which",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.while",
+    "label": "while",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.will",
+    "label": "will",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.with",
+    "label": "with",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.within",
+    "label": "within",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.without",
+    "label": "without",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.would",
+    "label": "would",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:function.your",
+    "label": "your",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:group.coordination",
+    "label": "coordinated group",
+    "semanticType": "Group",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.able",
+    "label": "able",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.acute",
+    "label": "acute",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.afraid",
+    "label": "afraid",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.again",
+    "label": "again",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.ago",
+    "label": "ago",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.almost",
+    "label": "almost",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.alone",
+    "label": "alone",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.already",
+    "label": "already",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.also",
+    "label": "also",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.always",
+    "label": "always",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.angry",
+    "label": "angry",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.aside",
+    "label": "aside",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.away",
+    "label": "away",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.back",
+    "label": "back",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.bad",
+    "label": "bad",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.black",
+    "label": "black",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.blue",
+    "label": "blue",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.bright",
+    "label": "bright",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.busy",
+    "label": "busy",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.certain",
+    "label": "certain",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.certainly",
+    "label": "certainly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.chief",
+    "label": "chief",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.chiefly",
+    "label": "chiefly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.chronic",
+    "label": "chronic",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.civil",
+    "label": "civil",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.clear",
+    "label": "clear",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.clearly",
+    "label": "clearly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.clinical",
+    "label": "clinical",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.cold",
+    "label": "cold",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.colonial",
+    "label": "colonial",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.common",
+    "label": "common",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.complete",
+    "label": "complete",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.considerable",
+    "label": "considerable",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.contrary",
+    "label": "contrary",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.cooked",
+    "label": "cooked",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.dark",
+    "label": "dark",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.dead",
+    "label": "dead",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.dear",
+    "label": "dear",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.deep",
+    "label": "deep",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.different",
+    "label": "different",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.difficult",
+    "label": "difficult",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.direct",
+    "label": "direct",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.down",
+    "label": "down",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.dry",
+    "label": "dry",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.due",
+    "label": "due",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.early",
+    "label": "early",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.easily",
+    "label": "easily",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.east",
+    "label": "east",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.easy",
+    "label": "easy",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.economic",
+    "label": "economic",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.else",
+    "label": "else",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.enough",
+    "label": "enough",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.equal",
+    "label": "equal",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.especially",
+    "label": "especially",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.even",
+    "label": "even",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.ever",
+    "label": "ever",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.evident",
+    "label": "evident",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.evidently",
+    "label": "evidently",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.far",
+    "label": "far",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.federal",
+    "label": "federal",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.few",
+    "label": "few",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.finally",
+    "label": "finally",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.fine",
+    "label": "fine",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.first",
+    "label": "first",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.foreign",
+    "label": "foreign",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.former",
+    "label": "former",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.forward",
+    "label": "forward",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.free",
+    "label": "free",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.french",
+    "label": "french",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.frequently",
+    "label": "frequently",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.fresh",
+    "label": "fresh",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.full",
+    "label": "full",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.further",
+    "label": "further",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.general",
+    "label": "general",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.glad",
+    "label": "glad",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.good",
+    "label": "good",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.great",
+    "label": "great",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.handsome",
+    "label": "handsome",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.happy",
+    "label": "happy",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.hard",
+    "label": "hard",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.hardly",
+    "label": "hardly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.heavy",
+    "label": "heavy",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.here",
+    "label": "here",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.high",
+    "label": "high",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.hot",
+    "label": "hot",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.how",
+    "label": "how",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.however",
+    "label": "however",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.human",
+    "label": "human",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.ill",
+    "label": "ill",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.immediately",
+    "label": "immediately",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.important",
+    "label": "important",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.impossible",
+    "label": "impossible",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.indeed",
+    "label": "indeed",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.individual",
+    "label": "individual",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.instead",
+    "label": "instead",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.joint",
+    "label": "joint",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.just",
+    "label": "just",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.large",
+    "label": "large",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.last",
+    "label": "last",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.late",
+    "label": "late",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.later",
+    "label": "later",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.liable",
+    "label": "liable",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.little",
+    "label": "little",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.local",
+    "label": "local",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.long",
+    "label": "long",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.longer",
+    "label": "longer",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.low",
+    "label": "low",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.main",
+    "label": "main",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.many",
+    "label": "many",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.merely",
+    "label": "merely",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.military",
+    "label": "military",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.much",
+    "label": "much",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.national",
+    "label": "national",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.natural",
+    "label": "natural",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.nearly",
+    "label": "nearly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.necessary",
+    "label": "necessary",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.never",
+    "label": "never",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.new",
+    "label": "new",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.next",
+    "label": "next",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.normal",
+    "label": "normal",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.north",
+    "label": "north",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.not",
+    "label": "not",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.now",
+    "label": "now",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.often",
+    "label": "often",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.old",
+    "label": "old",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.once",
+    "label": "once",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.only",
+    "label": "only",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.open",
+    "label": "open",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.other",
+    "label": "other",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.own",
+    "label": "own",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.pale",
+    "label": "pale",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.particularly",
+    "label": "particularly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.past",
+    "label": "past",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.perhaps",
+    "label": "perhaps",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.plain",
+    "label": "plain",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.political",
+    "label": "political",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.poor",
+    "label": "poor",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.popular",
+    "label": "popular",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.possible",
+    "label": "possible",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.present",
+    "label": "present",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.primary",
+    "label": "primary",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.probably",
+    "label": "probably",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.public",
+    "label": "public",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.quickly",
+    "label": "quickly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.quiet",
+    "label": "quiet",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.quietly",
+    "label": "quietly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.quite",
+    "label": "quite",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.rapidly",
+    "label": "rapidly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.rather",
+    "label": "rather",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.ready",
+    "label": "ready",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.really",
+    "label": "really",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.red",
+    "label": "red",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.republican",
+    "label": "republican",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.royal",
+    "label": "royal",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.same",
+    "label": "same",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.second",
+    "label": "second",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.secondary",
+    "label": "secondary",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.serious",
+    "label": "serious",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.several",
+    "label": "several",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.severe",
+    "label": "severe",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.short",
+    "label": "short",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.silent",
+    "label": "silent",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.similar",
+    "label": "similar",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.simple",
+    "label": "simple",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.single",
+    "label": "single",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.slight",
+    "label": "slight",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.slowly",
+    "label": "slowly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.small",
+    "label": "small",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.so",
+    "label": "so",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.soft",
+    "label": "soft",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.sometimes",
+    "label": "sometimes",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.soon",
+    "label": "soon",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.south",
+    "label": "south",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.southern",
+    "label": "southern",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.special",
+    "label": "special",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.still",
+    "label": "still",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.straight",
+    "label": "straight",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.strange",
+    "label": "strange",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.strong",
+    "label": "strong",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.such",
+    "label": "such",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.suddenly",
+    "label": "suddenly",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.sure",
+    "label": "sure",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.tall",
+    "label": "tall",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.terrible",
+    "label": "terrible",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.then",
+    "label": "then",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.therefore",
+    "label": "therefore",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.thin",
+    "label": "thin",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.third",
+    "label": "third",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.thus",
+    "label": "thus",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.together",
+    "label": "together",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.too",
+    "label": "too",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.true",
+    "label": "true",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.unable",
+    "label": "unable",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.upper",
+    "label": "upper",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.usual",
+    "label": "usual",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.usually",
+    "label": "usually",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.various",
+    "label": "various",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.very",
+    "label": "very",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.well",
+    "label": "well",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.western",
+    "label": "western",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.when",
+    "label": "when",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.where",
+    "label": "where",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.white",
+    "label": "white",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.whole",
+    "label": "whole",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.why",
+    "label": "why",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.wide",
+    "label": "wide",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.yet",
+    "label": "yet",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:property.young",
+    "label": "young",
+    "semanticType": "Property",
+    "metadata": {}
+  },
+  {
+    "id": "sem:state.copula",
+    "label": "copular predication",
+    "semanticType": "State",
+    "metadata": {}
+  }
+]

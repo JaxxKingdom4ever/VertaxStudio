@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "stage": "Surface",
+  "graph": {
+    "id": "reference-surface",
+    "nodes": [
+      {
+        "id": "realize",
+        "typeId": "surface.spell",
+        "params": {
+          "boundaries": {
+            "Morpheme": "'",
+            "Affix": ""
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "reference-surface-rule",
+      "stage": "Surface",
+      "matcher": {
+        "kind": "type",
+        "type": "PhonologicalForm"
+      },
+      "graphId": "reference-surface",
+      "priority": 100,
+      "fallback": false
+    }
+  ]
+}

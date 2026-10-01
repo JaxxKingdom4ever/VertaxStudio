@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "superlative-lowest",
+  "name": "superlative lowest (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "tall"
+    ],
+    "objects": {
+      "tall": {
+        "id": "tall",
+        "type": "Property",
+        "conceptId": "sem:property.tall",
+        "roles": {},
+        "features": {
+          "values": {
+            "degree": "lowest"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "⟦TALL⟧'mo"
+  },
+  "mode": "trace",
+  "assertions": []
+}

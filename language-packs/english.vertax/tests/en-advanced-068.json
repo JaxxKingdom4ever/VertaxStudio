@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:068",
+  "name": "future-perfect: The boy will have built the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy will have built the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy will have built the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "future",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.house"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "future-perfect"
+    }
+  ]
+}

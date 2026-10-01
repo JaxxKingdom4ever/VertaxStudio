@@ -1,0 +1,226 @@
+[
+  {
+    "id": "sem:entity.person",
+    "label": "Person",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.food",
+    "label": "Food",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.cook",
+    "label": "Cook",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:op.question",
+    "label": "Question search operator",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:verb.duru",
+    "label": "Active relational marker",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:aspect.continuous",
+    "label": "Continuous aspect",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:aspect.complete",
+    "label": "Completed aspect",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:tense.past",
+    "label": "Past suffix",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:tense.future",
+    "label": "Future suffix",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:polarity.negative",
+    "label": "Negation",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.he",
+    "label": "Third-person male pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.she",
+    "label": "Third-person female pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.they",
+    "label": "Third-person plural pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.we",
+    "label": "First-person plural pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.it",
+    "label": "Third-person inanimate pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.you",
+    "label": "Second-person pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.first_person",
+    "label": "First-person singular pronoun",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.put",
+    "label": "Put/place event",
+    "semanticType": "Event",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.book",
+    "label": "Book",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.table",
+    "label": "Table",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:adposition.on",
+    "label": "On/at relation",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:op.possession",
+    "label": "Possessive relation",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:op.conditional",
+    "label": "Subordinate conditional suffix",
+    "semanticType": "Operator",
+    "metadata": {}
+  },
+  {
+    "id": "sem:modality.necessity",
+    "label": "Necessity modality",
+    "semanticType": "Modality",
+    "metadata": {}
+  },
+  {
+    "id": "sem:modality.probability",
+    "label": "Probability modality",
+    "semanticType": "Modality",
+    "metadata": {}
+  },
+  {
+    "id": "sem:coord.add",
+    "label": "Addition-tail lexical verb",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "provisional-stem"
+    }
+  },
+  {
+    "id": "sem:coord.alternative",
+    "label": "Alternative-tail lexical verb",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "provisional-stem"
+    }
+  },
+  {
+    "id": "sem:coord.contrast",
+    "label": "Contrast-tail lexical verb",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "provisional-stem"
+    }
+  },
+  {
+    "id": "sem:compare.more",
+    "label": "More-comparative suffix",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "sem:compare.less",
+    "label": "Less-comparative suffix",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "sem:compare.equal",
+    "label": "Equal-comparative suffix",
+    "semanticType": "Operator",
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "sem:property.tall",
+    "label": "Illustrative height property",
+    "semanticType": "Property",
+    "metadata": {
+      "status": "provisional-stem"
+    }
+  },
+  {
+    "id": "sem:relation.conditional",
+    "label": "Conditional relation",
+    "semanticType": "Relation",
+    "metadata": {}
+  },
+  {
+    "id": "sem:list.coordination",
+    "label": "Dynamic coordination list",
+    "semanticType": "SemanticList",
+    "metadata": {}
+  },
+  {
+    "id": "sem:relation.comparison",
+    "label": "Scalar comparison",
+    "semanticType": "Relation",
+    "metadata": {}
+  }
+]

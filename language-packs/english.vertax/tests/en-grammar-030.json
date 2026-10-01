@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:030",
+  "name": "passive: The book was read by the girl.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The book was read by the girl."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The book was read by the girl.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "voice": "passive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "passive"
+    }
+  ]
+}

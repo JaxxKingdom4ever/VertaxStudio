@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:133",
+  "name": "ditransitive: The girl gave the boy the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl gave the boy the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl gave the boy the book.",
+    "rootConcept": "sem:event.give",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "recipient": "sem:entity.boy",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "ditransitive"
+    }
+  ]
+}

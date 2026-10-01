@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:139",
+  "name": "ditransitive: The girl brought the person the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl brought the person the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl brought the person the food.",
+    "rootConcept": "sem:event.bring",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "recipient": "sem:entity.person",
+      "theme": "sem:entity.food"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "ditransitive"
+    }
+  ]
+}

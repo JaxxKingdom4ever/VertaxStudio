@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lex:fixture:person",
+    "conceptId": "sem:entity.person",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "pa"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:fixture:food",
+    "conceptId": "sem:entity.food",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "fu"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:fixture:cook",
+    "conceptId": "sem:event.cook",
+    "lexicalClass": "Verb",
+    "forms": {
+      "citation": "ku"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  }
+]

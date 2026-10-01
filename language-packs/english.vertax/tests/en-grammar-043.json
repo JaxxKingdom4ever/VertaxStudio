@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:043",
+  "name": "modal: The boy can read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy can read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy can read the book.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "modality": "ability"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "modal"
+    }
+  ]
+}

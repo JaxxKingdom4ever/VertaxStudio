@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sem:entity.person",
+    "label": "person",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:entity.food",
+    "label": "food",
+    "semanticType": "Entity",
+    "metadata": {}
+  },
+  {
+    "id": "sem:event.cook",
+    "label": "cook",
+    "semanticType": "Event",
+    "metadata": {}
+  }
+]

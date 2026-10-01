@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:075",
+  "name": "perfect-progressive: The woman has been writing the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman has been writing the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman has been writing the book.",
+    "rootConcept": "sem:event.write",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "perfect-progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "perfect-progressive"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "coordination-alternative-two",
+  "name": "coordination alternative two (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "coord"
+    ],
+    "objects": {
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book": {
+        "id": "book",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "coord": {
+        "id": "coord",
+        "type": "SemanticList",
+        "conceptId": "sem:list.coordination",
+        "roles": {
+          "members": [
+            "person",
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "mode": "alternative"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person ⟦OR⟧'food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

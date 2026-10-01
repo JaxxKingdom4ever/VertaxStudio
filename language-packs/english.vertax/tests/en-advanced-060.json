@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:060",
+  "name": "pronoun-they: They buy the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "They buy the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "They buy the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.they",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-they"
+    }
+  ]
+}

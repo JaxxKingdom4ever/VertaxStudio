@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:064",
+  "name": "indefinite-determiner: A girl saw the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "A girl saw the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "A girl saw the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.dog"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "indefinite-determiner"
+    }
+  ]
+}

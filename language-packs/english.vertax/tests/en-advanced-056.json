@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:056",
+  "name": "future-perfect: The woman will have bought the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman will have bought the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman will have bought the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "future",
+      "aspect": "perfect"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "future-perfect"
+    }
+  ]
+}

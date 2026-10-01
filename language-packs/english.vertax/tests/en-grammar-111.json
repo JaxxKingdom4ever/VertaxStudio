@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:111",
+  "name": "attributive-modifier: The good person bought the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The good person bought the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The good person bought the book.",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "modified-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.person",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "attributive-modifier"
+    }
+  ]
+}

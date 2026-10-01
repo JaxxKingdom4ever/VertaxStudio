@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:070",
+  "name": "indefinite-determiner: A boy built the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "A boy built the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "A boy built the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.house"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "indefinite-determiner"
+    }
+  ]
+}

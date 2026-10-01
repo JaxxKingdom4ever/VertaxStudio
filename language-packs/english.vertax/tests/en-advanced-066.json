@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:066",
+  "name": "pronoun-they: They see the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "They see the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "They see the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.they",
+      "theme": "sem:entity.dog"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-they"
+    }
+  ]
+}

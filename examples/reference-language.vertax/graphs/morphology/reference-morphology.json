@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "stage": "Morphology",
+  "graph": {
+    "id": "reference-morphology",
+    "nodes": [
+      {
+        "id": "realize",
+        "typeId": "morph.lexical",
+        "params": {}
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "reference-morphology-rule",
+      "stage": "Morphology",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphCandidate"
+      },
+      "graphId": "reference-morphology",
+      "priority": 100,
+      "fallback": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:069",
+  "name": "perfect-progressive: The boy has been building the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy has been building the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy has been building the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "perfect-progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.house"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "perfect-progressive"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:114",
+  "name": "attributive-modifier: The small dog found the cat.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The small dog found the cat."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The small dog found the cat.",
+    "rootConcept": "sem:event.find",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "modified-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.dog",
+      "theme": "sem:entity.cat"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "attributive-modifier"
+    }
+  ]
+}

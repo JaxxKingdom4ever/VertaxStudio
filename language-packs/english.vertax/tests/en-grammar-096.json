@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:096",
+  "name": "plural-progressive: The people are reading the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The people are reading the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The people are reading the food.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "aspect": "progressive"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.person",
+      "theme": "sem:entity.food"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "plural-progressive"
+    }
+  ]
+}

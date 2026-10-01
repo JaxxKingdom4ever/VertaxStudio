@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "stage": "MorphologyAnalysis",
+  "graph": {
+    "id": "en-morphologyanalysis",
+    "nodes": [
+      {
+        "id": "node-morphologyanalysis",
+        "typeId": "analysis.lexeme-lookup",
+        "params": {
+          "allowProperNames": false
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-morphologyanalysis",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-morphologyanalysis",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule-morphologyanalysis",
+      "stage": "MorphologyAnalysis",
+      "matcher": {
+        "kind": "type",
+        "type": "OrthographicTokenSequence"
+      },
+      "graphId": "en-morphologyanalysis",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

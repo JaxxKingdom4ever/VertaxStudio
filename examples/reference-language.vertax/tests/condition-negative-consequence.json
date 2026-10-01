@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "condition-negative-consequence",
+  "name": "condition negative consequence",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "if1"
+    ],
+    "objects": {
+      "agent": {
+        "id": "agent",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "cook": {
+        "id": "cook",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "agent"
+          ],
+          "theme": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "polarity": "negative"
+          }
+        }
+      },
+      "me": {
+        "id": "me",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "cond": {
+        "id": "cond",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "theme": [
+            "food"
+          ],
+          "agent": [
+            "me"
+          ]
+        },
+        "features": {
+          "values": {
+            "clause": "conditional"
+          }
+        }
+      },
+      "if1": {
+        "id": "if1",
+        "type": "Relation",
+        "conceptId": "sem:relation.conditional",
+        "roles": {
+          "condition": [
+            "cond"
+          ],
+          "consequence": [
+            "cook"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "kosa cook food person zar cook food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

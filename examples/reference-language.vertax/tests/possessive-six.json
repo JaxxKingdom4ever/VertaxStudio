@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "possessive-six",
+  "name": "possessive six",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "book6"
+    ],
+    "objects": {
+      "owner": {
+        "id": "owner",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book1": {
+        "id": "book1",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "owner"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book2": {
+        "id": "book2",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book1"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book3": {
+        "id": "book3",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book2"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book4": {
+        "id": "book4",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book3"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book5": {
+        "id": "book5",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book4"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book6": {
+        "id": "book6",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book5"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "ko'lez lubik'lez lubik'lez lubik'lez lubik'lez lubik'lez lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

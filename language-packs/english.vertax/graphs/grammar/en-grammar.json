@@ -1,0 +1,1818 @@
+{
+  "schema_version": 1,
+  "stage": "Grammar",
+  "graph": {
+    "id": "en-grammar",
+    "nodes": [
+      {
+        "id": "node-grammar",
+        "typeId": "analysis.realize-template",
+        "params": {
+          "patterns": [
+            {
+              "id": "transitive-present-3",
+              "conceptId": "*",
+              "features": {
+                "tense": "present"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "citation"
+                    },
+                    "default": "present3"
+                  }
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 10
+            },
+            {
+              "id": "transitive-past",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 10
+            },
+            {
+              "id": "transitive-first-person",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "person": "first"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "roleConcepts": {
+                "agent": "sem:entity.speaker"
+              },
+              "parts": [
+                {
+                  "role": "agent",
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 20
+            },
+            {
+              "id": "future",
+              "conceptId": "*",
+              "features": {
+                "tense": "future"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "will"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "progressive-singular",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "aspect": "progressive"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "is"
+                },
+                {
+                  "root": true,
+                  "formKey": "progressive"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "progressive-plural",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "aspect": "progressive"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "are"
+                },
+                {
+                  "root": true,
+                  "formKey": "progressive"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30,
+              "roleFeatures": {
+                "agent": {
+                  "number": "plural"
+                }
+              }
+            },
+            {
+              "id": "perfect",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "aspect": "perfect"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "has"
+                },
+                {
+                  "root": true,
+                  "formKey": "participle"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "negative-present",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "polarity": "negative"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "does"
+                },
+                {
+                  "literal": "not"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "negative-past",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "polarity": "negative"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "did"
+                },
+                {
+                  "literal": "not"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "yesno-present",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "question": "yesno"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "does"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "?"
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "yesno-past",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "question": "yesno"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "did"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "?"
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "ditransitive",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "recipient",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "recipient",
+                  "formKeyFrom": {
+                    "role": "recipient",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 40
+            },
+            {
+              "id": "passive",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "voice": "passive"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "was"
+                },
+                {
+                  "root": true,
+                  "formKey": "participle"
+                },
+                {
+                  "literal": "by"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "locative",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme",
+                "location"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "in"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "location",
+                  "formKeyFrom": {
+                    "role": "location",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 40
+            },
+            {
+              "id": "copular-state",
+              "conceptId": "sem:state.copula",
+              "features": {
+                "tense": "present"
+              },
+              "requiredRoles": [
+                "subject",
+                "quality"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "subject",
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "is"
+                },
+                {
+                  "role": "quality",
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 40
+            },
+            {
+              "id": "attributive-adjective",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "syntax": "modified-subject"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "path": [
+                    {
+                      "role": "agent",
+                      "index": 0
+                    },
+                    {
+                      "role": "quality",
+                      "index": 0
+                    }
+                  ],
+                  "formKey": "citation"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "coordinated-agent",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "syntax": "coordinated"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "path": [
+                    {
+                      "role": "agent",
+                      "index": 0
+                    },
+                    {
+                      "role": "members",
+                      "index": 0
+                    }
+                  ],
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "and"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "path": [
+                    {
+                      "role": "agent",
+                      "index": 0
+                    },
+                    {
+                      "role": "members",
+                      "index": 1
+                    }
+                  ],
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "pronoun-agent",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "role": "agent",
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 40,
+              "roleConcepts": {
+                "agent": "sem:entity.she"
+              }
+            },
+            {
+              "id": "modal-ability",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "modality": "ability"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "can"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "wh-object",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "question": "wh"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "what"
+                },
+                {
+                  "literal": "does"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "?"
+                }
+              ],
+              "capitalize": true,
+              "priority": 30
+            },
+            {
+              "id": "possessed-subject",
+              "conceptId": "sem:state.copula",
+              "features": {
+                "tense": "present",
+                "syntax": "possessed-subject"
+              },
+              "requiredRoles": [
+                "subject",
+                "quality"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "path": [
+                    {
+                      "role": "subject"
+                    },
+                    {
+                      "role": "possessor"
+                    }
+                  ],
+                  "formKeyFrom": {
+                    "path": [
+                      {
+                        "role": "subject"
+                      },
+                      {
+                        "role": "possessor"
+                      }
+                    ],
+                    "featureId": "number",
+                    "values": {
+                      "plural": "pluralPossessive"
+                    },
+                    "default": "possessive"
+                  }
+                },
+                {
+                  "role": "subject",
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "is"
+                },
+                {
+                  "role": "quality",
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "comparative",
+              "conceptId": "sem:state.copula",
+              "features": {
+                "tense": "present",
+                "degree": "comparative"
+              },
+              "requiredRoles": [
+                "subject",
+                "quality",
+                "comparison"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "subject",
+                  "formKeyFrom": {
+                    "role": "subject",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "is"
+                },
+                {
+                  "role": "quality",
+                  "formKey": "comparative"
+                },
+                {
+                  "literal": "than"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "comparison",
+                  "formKeyFrom": {
+                    "role": "comparison",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "superlative",
+              "conceptId": "sem:state.copula",
+              "features": {
+                "tense": "present",
+                "degree": "superlative"
+              },
+              "requiredRoles": [
+                "subject",
+                "quality"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "subject",
+                  "formKeyFrom": {
+                    "role": "subject",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "is"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "quality",
+                  "formKey": "superlative"
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "adverbial",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "syntax": "adverbial"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme",
+                "manner"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "role": "manner",
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "complement-clause",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "syntax": "complement"
+              },
+              "requiredRoles": [
+                "agent",
+                "complement"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "that"
+                },
+                {
+                  "embeddedRole": "complement",
+                  "lowercaseInitial": true,
+                  "dropFinalPunctuation": true
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "relative-subject",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "syntax": "relative-subject"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "who"
+                },
+                {
+                  "embeddedPath": [
+                    {
+                      "role": "agent"
+                    },
+                    {
+                      "role": "relative"
+                    }
+                  ],
+                  "dropFinalPunctuation": true
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "relative-predicate",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "syntax": "relative-predicate"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": false,
+              "priority": 45
+            },
+            {
+              "id": "past-perfect",
+              "conceptId": "*",
+              "features": {
+                "tense": "past",
+                "aspect": "perfect"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "had"
+                },
+                {
+                  "root": true,
+                  "formKey": "participle"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "future-perfect",
+              "conceptId": "*",
+              "features": {
+                "tense": "future",
+                "aspect": "perfect"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "will"
+                },
+                {
+                  "literal": "have"
+                },
+                {
+                  "root": true,
+                  "formKey": "participle"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "perfect-progressive",
+              "conceptId": "*",
+              "features": {
+                "tense": "present",
+                "aspect": "perfect-progressive"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "has"
+                },
+                {
+                  "literal": "been"
+                },
+                {
+                  "root": true,
+                  "formKey": "progressive"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45
+            },
+            {
+              "id": "indefinite-agent",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "literal": "a"
+                },
+                {
+                  "role": "agent",
+                  "formKeyFrom": {
+                    "role": "agent",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45,
+              "roleFeatures": {
+                "agent": {
+                  "definiteness": "indefinite"
+                }
+              }
+            },
+            {
+              "id": "pronoun-he",
+              "conceptId": "*",
+              "features": {
+                "tense": "past"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "role": "agent",
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "past"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45,
+              "roleConcepts": {
+                "agent": "sem:entity.he"
+              }
+            },
+            {
+              "id": "pronoun-they",
+              "conceptId": "*",
+              "features": {
+                "tense": "present"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "role": "agent",
+                  "formKey": "citation"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                },
+                {
+                  "literal": "the"
+                },
+                {
+                  "role": "theme",
+                  "formKeyFrom": {
+                    "role": "theme",
+                    "featureId": "number",
+                    "values": {
+                      "plural": "plural"
+                    },
+                    "default": "citation"
+                  }
+                },
+                {
+                  "literal": "."
+                }
+              ],
+              "capitalize": true,
+              "priority": 45,
+              "roleConcepts": {
+                "agent": "sem:entity.they"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-grammar",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-grammar",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule-grammar",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Event"
+      },
+      "graphId": "en-grammar",
+      "priority": 1,
+      "fallback": false
+    },
+    {
+      "id": "rule-state",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "State"
+      },
+      "graphId": "en-grammar",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

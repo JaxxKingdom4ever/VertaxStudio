@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:012",
+  "name": "Productive transitive: The people see the foods.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The people see the foods."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The people see the foods."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": true,
+      "object_plural": true
+    }
+  ]
+}

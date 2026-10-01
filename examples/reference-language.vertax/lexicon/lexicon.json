@@ -1,0 +1,496 @@
+[
+  {
+    "id": "lex:entity.person",
+    "conceptId": "sem:entity.person",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "person"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.food",
+    "conceptId": "sem:entity.food",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "food"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:event.cook",
+    "conceptId": "sem:event.cook",
+    "lexicalClass": "Verb",
+    "forms": {
+      "citation": "cook"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:op.question",
+    "conceptId": "sem:op.question",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "vo"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:verb.duru",
+    "conceptId": "sem:verb.duru",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "duru"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:aspect.continuous",
+    "conceptId": "sem:aspect.continuous",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "esi"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:aspect.complete",
+    "conceptId": "sem:aspect.complete",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "ino"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:tense.past",
+    "conceptId": "sem:tense.past",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "in"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:tense.future",
+    "conceptId": "sem:tense.future",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "as"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:polarity.negative",
+    "conceptId": "sem:polarity.negative",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "zar"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.he",
+    "conceptId": "sem:entity.he",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "muko"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.she",
+    "conceptId": "sem:entity.she",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "nuko"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.they",
+    "conceptId": "sem:entity.they",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "ukolo"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.we",
+    "conceptId": "sem:entity.we",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "kolo"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.it",
+    "conceptId": "sem:entity.it",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "oko"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.you",
+    "conceptId": "sem:entity.you",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "uko"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.first_person",
+    "conceptId": "sem:entity.first_person",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "ko"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:event.put",
+    "conceptId": "sem:event.put",
+    "lexicalClass": "Verb",
+    "forms": {
+      "citation": "ekumet"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.book",
+    "conceptId": "sem:entity.book",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "lubik"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:entity.table",
+    "conceptId": "sem:entity.table",
+    "lexicalClass": "Noun",
+    "forms": {
+      "citation": "besato"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:adposition.on",
+    "conceptId": "sem:adposition.on",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "wudo"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:op.possession",
+    "conceptId": "sem:op.possession",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "lez"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:op.conditional",
+    "conceptId": "sem:op.conditional",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "sa"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:modality.necessity",
+    "conceptId": "sem:modality.necessity",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "yudek"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:modality.probability",
+    "conceptId": "sem:modality.probability",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "owit"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {}
+  },
+  {
+    "id": "lex:coord.add",
+    "conceptId": "sem:coord.add",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "⟦ADD⟧"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "provisional"
+    }
+  },
+  {
+    "id": "lex:coord.alternative",
+    "conceptId": "sem:coord.alternative",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "⟦OR⟧"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "provisional"
+    }
+  },
+  {
+    "id": "lex:coord.contrast",
+    "conceptId": "sem:coord.contrast",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "⟦BUT⟧"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "provisional"
+    }
+  },
+  {
+    "id": "lex:compare.more",
+    "conceptId": "sem:compare.more",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "pu"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "lex:compare.less",
+    "conceptId": "sem:compare.less",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "mo"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "lex:compare.equal",
+    "conceptId": "sem:compare.equal",
+    "lexicalClass": "Operator",
+    "forms": {
+      "citation": "ga"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "attested-marker"
+    }
+  },
+  {
+    "id": "lex:property.tall",
+    "conceptId": "sem:property.tall",
+    "lexicalClass": "Property",
+    "forms": {
+      "citation": "⟦TALL⟧"
+    },
+    "features": {
+      "values": {}
+    },
+    "valency": [],
+    "relatedLexemes": {},
+    "irregularRuleIds": [],
+    "metadata": {
+      "status": "provisional"
+    }
+  }
+]

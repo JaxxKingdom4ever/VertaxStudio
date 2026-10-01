@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:146",
+  "name": "Productive transitive: The man sees the houses.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The man sees the houses."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The man sees the houses."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": false,
+      "object_plural": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:086",
+  "name": "locative: The girl found the cat in the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl found the cat in the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl found the cat in the house.",
+    "rootConcept": "sem:event.find",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.cat",
+      "location": "sem:entity.house"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "locative"
+    }
+  ]
+}

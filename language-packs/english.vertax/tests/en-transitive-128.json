@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:128",
+  "name": "Productive transitive: The girls saw the people.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girls saw the people."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The girls saw the people."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "past",
+      "subject_plural": true,
+      "object_plural": true
+    }
+  ]
+}

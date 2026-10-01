@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "pronoun-she",
+  "name": "pronoun she",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "cook"
+    ],
+    "objects": {
+      "agent": {
+        "id": "agent",
+        "type": "Entity",
+        "conceptId": "sem:entity.she",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "cook": {
+        "id": "cook",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "agent"
+          ],
+          "theme": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "tense": "present"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "nuko cook food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

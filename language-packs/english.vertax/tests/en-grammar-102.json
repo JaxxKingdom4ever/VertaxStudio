@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:102",
+  "name": "copula: The boy is tall.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy is tall."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy is tall.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.boy",
+      "quality": "sem:property.tall"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "copula"
+    }
+  ]
+}

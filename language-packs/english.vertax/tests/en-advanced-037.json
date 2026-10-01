@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:037",
+  "name": "relative: The girl who cooked the food saw the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl who cooked the food saw the boy."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl who cooked the food saw the boy.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "relative-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "relative"
+    }
+  ]
+}

@@ -1,0 +1,1148 @@
+{
+  "schema_version": 1,
+  "id": "reference-clause",
+  "name": "Reference Clause & Phrase Realization",
+  "version": "0.2.0",
+  "description": "Project-owned tense, aspect, recursive possession, nested complement/conditional scopes and interrogative constructions over shared semantic concepts.",
+  "inputs": [
+    {
+      "id": "value",
+      "direction": "input",
+      "acceptedTypes": [
+        "Event",
+        "Entity",
+        "Modality",
+        "Relation",
+        "SemanticList",
+        "Property"
+      ],
+      "cardinality": "ONE",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "value",
+      "direction": "output",
+      "acceptedTypes": [
+        "MorphCandidate"
+      ],
+      "cardinality": "MANY",
+      "required": false
+    }
+  ],
+  "parameters": [
+    {
+      "id": "patterns",
+      "label": "Authored word patterns",
+      "valueType": "json",
+      "required": false,
+      "defaultValue": [
+        {
+          "id": "complement-call",
+          "conceptId": "sem:verb.duru",
+          "features": {},
+          "requiredRoles": [
+            "agent",
+            "complement"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "complement",
+              "scopeType": "Complement",
+              "acceptedTypes": [
+                "Event",
+                "Relation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "complement-call-negative",
+          "conceptId": "sem:verb.duru",
+          "features": {
+            "polarity": "negative"
+          },
+          "requiredRoles": [
+            "agent",
+            "complement"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:polarity.negative"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "complement",
+              "scopeType": "Complement",
+              "acceptedTypes": [
+                "Event",
+                "Relation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conditional-relation",
+          "conceptId": "sem:relation.conditional",
+          "valueTypes": [
+            "Relation"
+          ],
+          "requiredRoles": [
+            "condition",
+            "consequence"
+          ],
+          "words": [
+            {
+              "expandRole": "condition",
+              "scopeType": "ConditionalScope",
+              "acceptedTypes": [
+                "Event"
+              ],
+              "requiredFeatures": {
+                "clause": "conditional"
+              }
+            },
+            {
+              "expandRole": "consequence",
+              "scopeType": "ConsequenceScope",
+              "acceptedTypes": [
+                "Event",
+                "Relation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conditional-subject-negative",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "clause": "conditional",
+            "polarity": "negative"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            {
+              "expandRole": "agent",
+              "suffix": [
+                {
+                  "conceptId": "sem:op.conditional",
+                  "kind": "Suffix",
+                  "joinBefore": ""
+                }
+              ]
+            },
+            [
+              {
+                "conceptId": "sem:polarity.negative"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "conditional-subject-past",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "clause": "conditional",
+            "tense": "past"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            {
+              "expandRole": "agent",
+              "suffix": [
+                {
+                  "conceptId": "sem:op.conditional",
+                  "kind": "Suffix",
+                  "joinBefore": ""
+                }
+              ]
+            },
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:tense.past",
+                "kind": "Suffix",
+                "joinBefore": ""
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "conditional-subject",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "clause": "conditional"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            {
+              "expandRole": "agent",
+              "suffix": [
+                {
+                  "conceptId": "sem:op.conditional",
+                  "kind": "Suffix",
+                  "joinBefore": ""
+                }
+              ]
+            },
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "conditional-impersonal-negative",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "clause": "conditional",
+            "impersonal": true,
+            "polarity": "negative"
+          },
+          "requiredRoles": [
+            "theme"
+          ],
+          "roleTypes": {},
+          "words": [
+            [
+              {
+                "conceptId": "sem:polarity.negative"
+              }
+            ],
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:op.conditional",
+                "kind": "Suffix",
+                "joinBefore": ""
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "conditional-impersonal",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "clause": "conditional",
+            "impersonal": true
+          },
+          "requiredRoles": [
+            "theme"
+          ],
+          "roleTypes": {},
+          "words": [
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:op.conditional",
+                "kind": "Suffix",
+                "joinBefore": ""
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "question-continuous",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "continuous"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Unknown"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              },
+              {
+                "conceptId": "sem:op.question",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:verb.duru"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.continuous"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "question-progressive",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "progressive"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Unknown"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              },
+              {
+                "conceptId": "sem:op.question",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:verb.duru"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.continuous"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-continuous",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "continuous"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:verb.duru"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.continuous"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-progressive",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "progressive"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:verb.duru"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.continuous"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-complete",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "complete"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.complete"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-past",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "tense": "past"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:tense.past",
+                "kind": "Suffix",
+                "joinBefore": ""
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-future",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "tense": "future"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:tense.future",
+                "kind": "Suffix",
+                "joinBefore": ""
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-negative",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "polarity": "negative"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:polarity.negative"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-perfect",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "aspect": "perfect"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "conceptId": "sem:aspect.complete"
+              },
+              {
+                "root": true,
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "question-object",
+          "conceptId": "sem:event.cook",
+          "features": {},
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity",
+            "theme": "Unknown"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            [
+              {
+                "role": "theme"
+              },
+              {
+                "conceptId": "sem:op.question",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "question-polar",
+          "conceptId": "sem:event.cook",
+          "features": {
+            "question": "yesno"
+          },
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:op.question",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "imperative-put",
+          "conceptId": "sem:event.put",
+          "features": {
+            "mood": "imperative"
+          },
+          "requiredRoles": [
+            "theme",
+            "location"
+          ],
+          "roleTypes": {},
+          "words": [
+            {
+              "expandRole": "theme"
+            },
+            [
+              {
+                "root": true
+              }
+            ],
+            [
+              {
+                "role": "location"
+              },
+              {
+                "conceptId": "sem:adposition.on",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "question-agent",
+          "conceptId": "sem:event.cook",
+          "features": {},
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Unknown"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              },
+              {
+                "conceptId": "sem:op.question",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "statement-simple",
+          "conceptId": "sem:event.cook",
+          "features": {},
+          "requiredRoles": [
+            "agent",
+            "theme"
+          ],
+          "roleTypes": {
+            "agent": "Entity"
+          },
+          "words": [
+            [
+              {
+                "role": "agent"
+              }
+            ],
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "theme"
+            }
+          ]
+        },
+        {
+          "id": "recursive-noun-possession",
+          "conceptId": "*",
+          "valueTypes": [
+            "Entity",
+            "Reference"
+          ],
+          "requiredRoles": [
+            "possessor"
+          ],
+          "roleTypes": {
+            "possessor": "Entity"
+          },
+          "words": [
+            {
+              "expandRole": "possessor",
+              "suffix": [
+                {
+                  "conceptId": "sem:op.possession",
+                  "kind": "Suffix",
+                  "joinBefore": "'"
+                }
+              ]
+            },
+            [
+              {
+                "root": true
+              }
+            ]
+          ]
+        },
+        {
+          "id": "necessity-modality",
+          "conceptId": "sem:modality.necessity",
+          "requiredRoles": [
+            "scope"
+          ],
+          "words": [
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "scope",
+              "scopeType": "ModalScope",
+              "acceptedTypes": [
+                "Event",
+                "Modality"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "probability-modality",
+          "conceptId": "sem:modality.probability",
+          "requiredRoles": [
+            "scope"
+          ],
+          "words": [
+            [
+              {
+                "root": true
+              }
+            ],
+            {
+              "expandRole": "scope",
+              "scopeType": "ModalScope",
+              "acceptedTypes": [
+                "Event",
+                "Modality"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dynamic-coordination-add",
+          "conceptId": "sem:list.coordination",
+          "valueTypes": [
+            "SemanticList"
+          ],
+          "features": {
+            "mode": "add"
+          },
+          "requiredRoles": [
+            "members"
+          ],
+          "words": [
+            {
+              "expandRole": "members",
+              "minItems": 2,
+              "prefix": [
+                {
+                  "conceptId": "sem:coord.add"
+                }
+              ],
+              "prefixBoundary": "'"
+            }
+          ]
+        },
+        {
+          "id": "dynamic-coordination-alternative",
+          "conceptId": "sem:list.coordination",
+          "valueTypes": [
+            "SemanticList"
+          ],
+          "features": {
+            "mode": "alternative"
+          },
+          "requiredRoles": [
+            "members"
+          ],
+          "words": [
+            {
+              "expandRole": "members",
+              "minItems": 2,
+              "prefix": [
+                {
+                  "conceptId": "sem:coord.alternative"
+                }
+              ],
+              "prefixBoundary": "'"
+            }
+          ]
+        },
+        {
+          "id": "dynamic-coordination-contrast",
+          "conceptId": "sem:list.coordination",
+          "valueTypes": [
+            "SemanticList"
+          ],
+          "features": {
+            "mode": "contrast"
+          },
+          "requiredRoles": [
+            "members"
+          ],
+          "words": [
+            {
+              "expandRole": "members",
+              "minItems": 2,
+              "prefix": [
+                {
+                  "conceptId": "sem:coord.contrast"
+                }
+              ],
+              "prefixBoundary": "'"
+            }
+          ]
+        },
+        {
+          "id": "comparison-more",
+          "conceptId": "sem:relation.comparison",
+          "valueTypes": [
+            "Relation"
+          ],
+          "features": {
+            "degree": "more"
+          },
+          "requiredRoles": [
+            "first",
+            "property",
+            "second"
+          ],
+          "words": [
+            {
+              "expandRole": "first",
+              "suffix": [
+                {
+                  "conceptId": "sem:compare.more",
+                  "kind": "Suffix",
+                  "joinBefore": "'"
+                }
+              ]
+            },
+            {
+              "expandRole": "property"
+            },
+            {
+              "expandRole": "second"
+            }
+          ]
+        },
+        {
+          "id": "comparison-less",
+          "conceptId": "sem:relation.comparison",
+          "valueTypes": [
+            "Relation"
+          ],
+          "features": {
+            "degree": "less"
+          },
+          "requiredRoles": [
+            "first",
+            "property",
+            "second"
+          ],
+          "words": [
+            {
+              "expandRole": "first",
+              "suffix": [
+                {
+                  "conceptId": "sem:compare.less",
+                  "kind": "Suffix",
+                  "joinBefore": "'"
+                }
+              ]
+            },
+            {
+              "expandRole": "property"
+            },
+            {
+              "expandRole": "second"
+            }
+          ]
+        },
+        {
+          "id": "comparison-equal",
+          "conceptId": "sem:relation.comparison",
+          "valueTypes": [
+            "Relation"
+          ],
+          "features": {
+            "degree": "equal"
+          },
+          "requiredRoles": [
+            "first",
+            "property",
+            "second"
+          ],
+          "words": [
+            {
+              "expandRole": "first",
+              "suffix": [
+                {
+                  "conceptId": "sem:compare.equal",
+                  "kind": "Suffix",
+                  "joinBefore": "'"
+                }
+              ]
+            },
+            {
+              "expandRole": "property"
+            },
+            {
+              "expandRole": "second"
+            }
+          ]
+        },
+        {
+          "id": "superlative-highest",
+          "conceptId": "sem:property.tall",
+          "valueTypes": [
+            "Property"
+          ],
+          "features": {
+            "degree": "highest"
+          },
+          "words": [
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:compare.more",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "superlative-lowest",
+          "conceptId": "sem:property.tall",
+          "valueTypes": [
+            "Property"
+          ],
+          "features": {
+            "degree": "lowest"
+          },
+          "words": [
+            [
+              {
+                "root": true
+              },
+              {
+                "conceptId": "sem:compare.less",
+                "kind": "Suffix",
+                "joinBefore": "'"
+              }
+            ]
+          ]
+        },
+        {
+          "id": "property-tall-plain",
+          "conceptId": "sem:property.tall",
+          "valueTypes": [
+            "Property"
+          ],
+          "features": {},
+          "words": [
+            [
+              {
+                "root": true
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "internal_graph": {
+    "id": "reference-clause-internal",
+    "nodes": [
+      {
+        "id": "realize-authored-words",
+        "typeId": "grammar.realize-words",
+        "params": {
+          "patterns": {
+            "$groupParam": "patterns"
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize-authored-words",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "realize-authored-words",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "test_ids": []
+}

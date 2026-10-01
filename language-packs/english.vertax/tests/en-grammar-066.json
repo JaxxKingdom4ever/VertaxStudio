@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:066",
+  "name": "wh-question: What does the woman buy?",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "What does the woman buy?"
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "What does the woman buy?",
+    "rootConcept": "sem:event.buy",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "question": "wh"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman"
+    },
+    "roleTypes": {
+      "theme": "Unknown"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "wh-question"
+    }
+  ]
+}

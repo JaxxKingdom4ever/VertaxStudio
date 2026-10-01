@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "imperative-put",
+  "name": "imperative put",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "put"
+    ],
+    "objects": {
+      "book": {
+        "id": "book",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "table": {
+        "id": "table",
+        "type": "Entity",
+        "conceptId": "sem:entity.table",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "put": {
+        "id": "put",
+        "type": "Event",
+        "conceptId": "sem:event.put",
+        "roles": {
+          "theme": [
+            "book"
+          ],
+          "location": [
+            "table"
+          ]
+        },
+        "features": {
+          "values": {
+            "mood": "imperative"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "lubik ekumet besato'wudo"
+  },
+  "mode": "trace",
+  "assertions": []
+}

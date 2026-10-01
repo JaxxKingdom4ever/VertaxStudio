@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:118",
+  "name": "coordination: The woman and the girl read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman and the girl read the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman and the girl read the book.",
+    "rootConcept": "sem:event.read",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present",
+      "syntax": "coordinated"
+    },
+    "roleConcepts": {
+      "agent": "sem:group.coordination",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {
+      "agent": "Group"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "coordination"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "declarative-possessive",
+  "name": "declarative possessive",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "cook"
+    ],
+    "objects": {
+      "owner": {
+        "id": "owner",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book1": {
+        "id": "book1",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "owner"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book2": {
+        "id": "book2",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book1"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "cook": {
+        "id": "cook",
+        "type": "Event",
+        "conceptId": "sem:event.cook",
+        "roles": {
+          "agent": [
+            "person"
+          ],
+          "theme": [
+            "book2"
+          ]
+        },
+        "features": {
+          "values": {
+            "tense": "present"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person cook ko'lez lubik'lez lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

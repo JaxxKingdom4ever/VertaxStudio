@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "stage": "MeaningAnalysis",
+  "graph": {
+    "id": "en-meaninganalysis",
+    "nodes": [
+      {
+        "id": "node-meaninganalysis",
+        "typeId": "analysis.to-meaning",
+        "params": {
+          "formFeatureMap": {
+            "Noun": {
+              "plural": {
+                "number": "plural"
+              },
+              "citation": {
+                "number": "singular"
+              },
+              "possessive": {
+                "number": "singular"
+              },
+              "pluralPossessive": {
+                "number": "plural"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-meaninganalysis",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-meaninganalysis",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule-meaninganalysis",
+      "stage": "MeaningAnalysis",
+      "matcher": {
+        "kind": "type",
+        "type": "SyntacticAnalysis"
+      },
+      "graphId": "en-meaninganalysis",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

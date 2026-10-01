@@ -1,0 +1,2948 @@
+{
+  "schema_version": 1,
+  "stage": "GrammarAnalysis",
+  "graph": {
+    "id": "en-grammaranalysis",
+    "nodes": [
+      {
+        "id": "node-grammaranalysis",
+        "typeId": "analysis.match-pattern",
+        "params": {
+          "patterns": [
+            {
+              "id": "transitive-present-3",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "present3"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "slotConstraints": [
+                {
+                  "leftSlot": 1,
+                  "rightSlot": 2,
+                  "allowedPairs": [
+                    [
+                      "citation",
+                      "present3"
+                    ],
+                    [
+                      "plural",
+                      "citation"
+                    ]
+                  ]
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "person"
+                      ],
+                      "theme": [
+                        "food"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present"
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "food",
+                    "type": "Entity",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "transitive-past",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "person"
+                      ],
+                      "theme": [
+                        "food"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "food",
+                    "type": "Entity",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "transitive-first-person",
+              "slots": [
+                {
+                  "text": "i"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 1,
+                    "roles": {
+                      "agent": [
+                        "person"
+                      ],
+                      "theme": [
+                        "food"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "person": "first"
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "type": "Entity",
+                    "slot": 0
+                  },
+                  {
+                    "id": "food",
+                    "type": "Entity",
+                    "slot": 3
+                  }
+                ]
+              }
+            },
+            {
+              "id": "see-instrument-attachment",
+              "slots": [
+                {
+                  "text": "i"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "conceptIds": [
+                    "sem:event.see"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ],
+                  "conceptIds": [
+                    "sem:entity.man"
+                  ]
+                },
+                {
+                  "text": "with"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ],
+                  "conceptIds": [
+                    "sem:entity.telescope"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "conceptId": "sem:event.see",
+                    "features": {
+                      "tense": "past"
+                    },
+                    "roles": {
+                      "agent": [
+                        "person"
+                      ],
+                      "patient": [
+                        "man"
+                      ],
+                      "instrument": [
+                        "telescope"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "man",
+                    "type": "Entity",
+                    "slot": 3
+                  },
+                  {
+                    "id": "person",
+                    "type": "Entity",
+                    "slot": 0
+                  },
+                  {
+                    "id": "telescope",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "see-nominal-attachment",
+              "slots": [
+                {
+                  "text": "i"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "conceptIds": [
+                    "sem:event.see"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ],
+                  "conceptIds": [
+                    "sem:entity.man"
+                  ]
+                },
+                {
+                  "text": "with"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ],
+                  "conceptIds": [
+                    "sem:entity.telescope"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "conceptId": "sem:event.see",
+                    "features": {
+                      "tense": "past"
+                    },
+                    "roles": {
+                      "agent": [
+                        "person"
+                      ],
+                      "patient": [
+                        "man"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "man",
+                    "type": "Entity",
+                    "slot": 3,
+                    "roles": {
+                      "with": [
+                        "telescope"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "type": "Entity",
+                    "slot": 0
+                  },
+                  {
+                    "id": "telescope",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "future",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "will"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "future"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "progressive-singular",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "progressive"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "aspect": "progressive"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "progressive-plural",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "presentPlural"
+                  ],
+                  "text": "are"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "progressive"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "aspect": "progressive"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "perfect",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "has"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "participle"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "aspect": "perfect"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "negative-present",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "does"
+                },
+                {
+                  "text": "not"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 4,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "polarity": "negative"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "negative-past",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "text": "did"
+                },
+                {
+                  "text": "not"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 4,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "polarity": "negative"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "yesno-present",
+              "slots": [
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "does"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "?"
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "question": "yesno"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 2
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "yesno-past",
+              "slots": [
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "text": "did"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "?"
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "question": "yesno"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 2
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ditransitive",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "conceptIds": [
+                    "sem:event.give",
+                    "sem:event.teach",
+                    "sem:event.tell",
+                    "sem:event.bring",
+                    "sem:event.send",
+                    "sem:event.show",
+                    "sem:event.offer"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ],
+                      "recipient": [
+                        "recipient"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 6
+                  },
+                  {
+                    "id": "recipient",
+                    "type": "Entity",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "passive",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "text": "was"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "participle"
+                  ]
+                },
+                {
+                  "text": "by"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "voice": "passive"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 6
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 1
+                  }
+                ]
+              }
+            },
+            {
+              "id": "locative",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "in"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ],
+                      "location": [
+                        "location"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 4
+                  },
+                  {
+                    "id": "location",
+                    "type": "Entity",
+                    "slot": 7
+                  }
+                ]
+              }
+            },
+            {
+              "id": "copular-state",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "state",
+                "objects": [
+                  {
+                    "id": "state",
+                    "type": "State",
+                    "conceptId": "sem:state.copula",
+                    "roles": {
+                      "subject": [
+                        "agent"
+                      ],
+                      "quality": [
+                        "quality"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 3
+                  }
+                ]
+              }
+            },
+            {
+              "id": "attributive-adjective",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "syntax": "modified-subject"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 2,
+                    "roles": {
+                      "quality": [
+                        "quality"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "coordinated-agent",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "and"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 5,
+                    "roles": {
+                      "agent": [
+                        "group"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "syntax": "coordinated"
+                    }
+                  },
+                  {
+                    "id": "group",
+                    "type": "Group",
+                    "conceptId": "sem:group.coordination",
+                    "roles": {
+                      "members": [
+                        "first",
+                        "second"
+                      ]
+                    },
+                    "features": {
+                      "number": "plural"
+                    }
+                  },
+                  {
+                    "id": "first",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "second",
+                    "type": "Entity",
+                    "slot": 4
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 7
+                  }
+                ]
+              }
+            },
+            {
+              "id": "pronoun-agent",
+              "slots": [
+                {
+                  "classes": [
+                    "Pronoun"
+                  ],
+                  "text": "she"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 1,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 0
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 3
+                  }
+                ]
+              }
+            },
+            {
+              "id": "modal-ability",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Modal"
+                  ],
+                  "text": "can"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "modality": "ability"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "wh-object",
+              "slots": [
+                {
+                  "text": "what"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "does"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "?"
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 4,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "question": "wh"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 3
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Unknown",
+                    "conceptId": "sem:entity.unknown"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "singular-possessor",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "possessive"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "state",
+                "objects": [
+                  {
+                    "id": "state",
+                    "type": "State",
+                    "conceptId": "sem:state.copula",
+                    "roles": {
+                      "subject": [
+                        "subject"
+                      ],
+                      "quality": [
+                        "quality"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "syntax": "possessed-subject"
+                    }
+                  },
+                  {
+                    "id": "subject",
+                    "type": "Entity",
+                    "slot": 2,
+                    "roles": {
+                      "possessor": [
+                        "possessor"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "possessor",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "plural-possessor",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "pluralPossessive"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "state",
+                "objects": [
+                  {
+                    "id": "state",
+                    "type": "State",
+                    "conceptId": "sem:state.copula",
+                    "roles": {
+                      "subject": [
+                        "subject"
+                      ],
+                      "quality": [
+                        "quality"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "syntax": "possessed-subject"
+                    }
+                  },
+                  {
+                    "id": "subject",
+                    "type": "Entity",
+                    "slot": 2,
+                    "roles": {
+                      "possessor": [
+                        "possessor"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "possessor",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "comparative",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ],
+                  "formKeys": [
+                    "comparative"
+                  ]
+                },
+                {
+                  "text": "than"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "state",
+                "objects": [
+                  {
+                    "id": "state",
+                    "type": "State",
+                    "conceptId": "sem:state.copula",
+                    "roles": {
+                      "subject": [
+                        "subject"
+                      ],
+                      "quality": [
+                        "quality"
+                      ],
+                      "comparison": [
+                        "comparison"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "degree": "comparative"
+                    }
+                  },
+                  {
+                    "id": "subject",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 3
+                  },
+                  {
+                    "id": "comparison",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "superlative",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "is"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Adjective"
+                  ],
+                  "formKeys": [
+                    "superlative"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "state",
+                "objects": [
+                  {
+                    "id": "state",
+                    "type": "State",
+                    "conceptId": "sem:state.copula",
+                    "roles": {
+                      "subject": [
+                        "subject"
+                      ],
+                      "quality": [
+                        "quality"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "degree": "superlative"
+                    }
+                  },
+                  {
+                    "id": "subject",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "quality",
+                    "type": "Property",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "adverbial",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Adverb"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ],
+                      "manner": [
+                        "manner"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "syntax": "adverbial"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  },
+                  {
+                    "id": "manner",
+                    "type": "Property",
+                    "slot": 2
+                  }
+                ]
+              }
+            },
+            {
+              "id": "complement-clause",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "conceptIds": [
+                    "sem:event.say",
+                    "sem:event.think",
+                    "sem:event.believe"
+                  ]
+                },
+                {
+                  "text": "that"
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "complement": [
+                        "embedded"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "syntax": "complement"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "embedded",
+                    "type": "Event",
+                    "slot": 6,
+                    "roles": {
+                      "agent": [
+                        "embeddedAgent"
+                      ],
+                      "theme": [
+                        "embeddedTheme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "embeddedAgent",
+                    "type": "Entity",
+                    "slot": 5
+                  },
+                  {
+                    "id": "embeddedTheme",
+                    "type": "Entity",
+                    "slot": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": "relative-subject",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "who"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 6,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "syntax": "relative-subject"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1,
+                    "roles": {
+                      "relative": [
+                        "relative"
+                      ]
+                    }
+                  },
+                  {
+                    "id": "relative",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "relativeTheme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "syntax": "relative-predicate"
+                    }
+                  },
+                  {
+                    "id": "relativeTheme",
+                    "type": "Entity",
+                    "slot": 5
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": "past-perfect",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ],
+                  "text": "had"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "participle"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 3,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past",
+                      "aspect": "perfect"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 5
+                  }
+                ]
+              }
+            },
+            {
+              "id": "future-perfect",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "will"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ],
+                  "text": "have"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "participle"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 4,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "future",
+                      "aspect": "perfect"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "perfect-progressive",
+              "slots": [
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "present3"
+                  ],
+                  "text": "has"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "participle"
+                  ],
+                  "text": "been"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "progressive"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 4,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present",
+                      "aspect": "perfect-progressive"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "indefinite-agent",
+              "slots": [
+                {
+                  "text": "a"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 2,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 1,
+                    "features": {
+                      "definiteness": "indefinite"
+                    }
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 4
+                  }
+                ]
+              }
+            },
+            {
+              "id": "pronoun-he",
+              "slots": [
+                {
+                  "classes": [
+                    "Pronoun"
+                  ],
+                  "text": "he"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "past"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 1,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "past"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 0
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 3
+                  }
+                ]
+              }
+            },
+            {
+              "id": "pronoun-they",
+              "slots": [
+                {
+                  "classes": [
+                    "Pronoun"
+                  ],
+                  "text": "they"
+                },
+                {
+                  "classes": [
+                    "Verb"
+                  ],
+                  "formKeys": [
+                    "citation"
+                  ]
+                },
+                {
+                  "text": "the"
+                },
+                {
+                  "classes": [
+                    "Noun"
+                  ],
+                  "formKeys": [
+                    "citation",
+                    "plural"
+                  ]
+                },
+                {
+                  "text": "."
+                }
+              ],
+              "meaning": {
+                "root": "event",
+                "objects": [
+                  {
+                    "id": "event",
+                    "type": "Event",
+                    "slot": 1,
+                    "roles": {
+                      "agent": [
+                        "agent"
+                      ],
+                      "theme": [
+                        "theme"
+                      ]
+                    },
+                    "features": {
+                      "tense": "present"
+                    }
+                  },
+                  {
+                    "id": "agent",
+                    "type": "Entity",
+                    "slot": 0,
+                    "features": {
+                      "number": "plural"
+                    }
+                  },
+                  {
+                    "id": "theme",
+                    "type": "Entity",
+                    "slot": 3
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-grammaranalysis",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-grammaranalysis",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule-grammaranalysis",
+      "stage": "GrammarAnalysis",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphAnalysis"
+      },
+      "graphId": "en-grammaranalysis",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

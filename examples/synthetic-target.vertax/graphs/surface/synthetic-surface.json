@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "stage": "Surface",
+  "graph": {
+    "id": "synthetic-surface",
+    "nodes": [
+      {
+        "id": "fixture-surface",
+        "typeId": "surface.join",
+        "params": {
+          "separator": ""
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-surface",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-surface",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "fixture-rule-surface",
+      "stage": "Surface",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphSequence"
+      },
+      "graphId": "synthetic-surface",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

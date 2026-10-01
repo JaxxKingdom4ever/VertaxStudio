@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:048",
+  "name": "pronoun-they: They cook the food.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "They cook the food."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "They cook the food.",
+    "rootConcept": "sem:event.cook",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.they",
+      "theme": "sem:entity.food"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-they"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:101",
+  "name": "copula: The girl is happy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl is happy."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The girl is happy.",
+    "rootConcept": "sem:state.copula",
+    "rootType": "State",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "subject": "sem:entity.girl",
+      "quality": "sem:property.happy"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "copula"
+    }
+  ]
+}

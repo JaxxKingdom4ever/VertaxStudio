@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test:en:telescope-ambiguity",
+  "name": "telescope-ambiguity",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "I saw the man with the telescope."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 2
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "telescope-ambiguity"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:039",
+  "name": "relative: The woman who bought the house saw the dog.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The woman who bought the house saw the dog."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The woman who bought the house saw the dog.",
+    "rootConcept": "sem:event.see",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "relative-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.woman",
+      "theme": "sem:entity.dog"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "relative"
+    }
+  ]
+}

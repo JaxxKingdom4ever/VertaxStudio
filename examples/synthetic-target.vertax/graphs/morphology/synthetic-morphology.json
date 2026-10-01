@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "stage": "Morphology",
+  "graph": {
+    "id": "synthetic-morphology",
+    "nodes": [
+      {
+        "id": "fixture-morphology",
+        "typeId": "morph.root",
+        "params": {}
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-morphology",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-morphology",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "fixture-rule-morphology",
+      "stage": "Morphology",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphCandidate"
+      },
+      "graphId": "synthetic-morphology",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

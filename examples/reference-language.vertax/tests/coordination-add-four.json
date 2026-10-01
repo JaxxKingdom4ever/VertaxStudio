@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "coordination-add-four",
+  "name": "coordination add four (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "coord"
+    ],
+    "objects": {
+      "me": {
+        "id": "me",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book": {
+        "id": "book",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "coord": {
+        "id": "coord",
+        "type": "SemanticList",
+        "conceptId": "sem:list.coordination",
+        "roles": {
+          "members": [
+            "me",
+            "person",
+            "food",
+            "book"
+          ]
+        },
+        "features": {
+          "values": {
+            "mode": "add"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "ko ⟦ADD⟧'person ⟦ADD⟧'food ⟦ADD⟧'lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

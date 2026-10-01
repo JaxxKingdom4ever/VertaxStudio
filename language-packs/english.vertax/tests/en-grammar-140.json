@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:140",
+  "name": "ditransitive: The boy sent the woman the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The boy sent the woman the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The boy sent the woman the book.",
+    "rootConcept": "sem:event.send",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "recipient": "sem:entity.woman",
+      "theme": "sem:entity.book"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "ditransitive"
+    }
+  ]
+}

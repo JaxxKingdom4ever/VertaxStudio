@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:077",
+  "name": "pronoun-he: He wrote the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "He wrote the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "He wrote the book.",
+    "rootConcept": "sem:event.write",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.he",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-he"
+    }
+  ]
+}

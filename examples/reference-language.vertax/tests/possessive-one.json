@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "possessive-one",
+  "name": "possessive one",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "book1"
+    ],
+    "objects": {
+      "owner": {
+        "id": "owner",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book1": {
+        "id": "book1",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "owner"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "ko'lez lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

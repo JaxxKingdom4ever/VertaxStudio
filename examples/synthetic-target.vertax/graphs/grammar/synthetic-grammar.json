@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "stage": "Grammar",
+  "graph": {
+    "id": "synthetic-grammar",
+    "nodes": [
+      {
+        "id": "fixture-grammar",
+        "typeId": "analysis.realize-template",
+        "params": {
+          "patterns": [
+            {
+              "id": "vos",
+              "conceptId": "sem:event.cook",
+              "features": {
+                "tense": "present"
+              },
+              "requiredRoles": [
+                "agent",
+                "theme"
+              ],
+              "parts": [
+                {
+                  "role": "theme"
+                },
+                {
+                  "role": "agent"
+                },
+                {
+                  "root": true,
+                  "formKey": "citation"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-grammar",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "fixture-grammar",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "fixture-rule-grammar",
+      "stage": "Grammar",
+      "matcher": {
+        "kind": "type",
+        "type": "Event"
+      },
+      "graphId": "synthetic-grammar",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

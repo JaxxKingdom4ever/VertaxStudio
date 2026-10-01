@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:grammar:115",
+  "name": "attributive-modifier: The tall girl built the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The tall girl built the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "The tall girl built the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "past",
+      "syntax": "modified-subject"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.house"
+    },
+    "roleTypes": {}
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "attributive-modifier"
+    }
+  ]
+}

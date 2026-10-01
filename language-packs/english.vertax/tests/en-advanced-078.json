@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:078",
+  "name": "pronoun-they: They write the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "They write the book."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "They write the book.",
+    "rootConcept": "sem:event.write",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.they",
+      "theme": "sem:entity.book"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-they"
+    }
+  ]
+}

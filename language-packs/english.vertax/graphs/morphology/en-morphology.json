@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "stage": "Morphology",
+  "graph": {
+    "id": "en-morphology",
+    "nodes": [
+      {
+        "id": "node-morphology",
+        "typeId": "morph.root",
+        "params": {}
+      }
+    ],
+    "edges": [],
+    "exposedInputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-morphology",
+        "nodePortId": "value"
+      }
+    ],
+    "exposedOutputs": [
+      {
+        "graphPortId": "value",
+        "nodeId": "node-morphology",
+        "nodePortId": "value"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule-morphology",
+      "stage": "Morphology",
+      "matcher": {
+        "kind": "type",
+        "type": "MorphCandidate"
+      },
+      "graphId": "en-morphology",
+      "priority": 1,
+      "fallback": false
+    }
+  ]
+}

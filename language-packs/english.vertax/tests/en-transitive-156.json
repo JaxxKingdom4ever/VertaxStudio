@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:156",
+  "name": "Productive transitive: The men see the cities.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The men see the cities."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The men see the cities."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": true,
+      "object_plural": true
+    }
+  ]
+}

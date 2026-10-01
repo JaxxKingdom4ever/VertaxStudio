@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "comparison-coordinated-second",
+  "name": "comparison coordinated second (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "compare"
+    ],
+    "objects": {
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "SemanticList",
+        "conceptId": "sem:list.coordination",
+        "roles": {
+          "members": [
+            "person",
+            "other"
+          ]
+        },
+        "features": {
+          "values": {
+            "mode": "add"
+          }
+        }
+      },
+      "tall": {
+        "id": "tall",
+        "type": "Property",
+        "conceptId": "sem:property.tall",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "other": {
+        "id": "other",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "compare": {
+        "id": "compare",
+        "type": "Relation",
+        "conceptId": "sem:relation.comparison",
+        "roles": {
+          "first": [
+            "person"
+          ],
+          "property": [
+            "tall"
+          ],
+          "second": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "degree": "more"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person'pu ⟦TALL⟧ person ⟦ADD⟧'food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

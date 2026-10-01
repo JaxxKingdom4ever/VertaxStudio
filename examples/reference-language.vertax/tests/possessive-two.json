@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "possessive-two",
+  "name": "possessive two",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "book2"
+    ],
+    "objects": {
+      "owner": {
+        "id": "owner",
+        "type": "Entity",
+        "conceptId": "sem:entity.first_person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "book1": {
+        "id": "book1",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "owner"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      },
+      "book2": {
+        "id": "book2",
+        "type": "Entity",
+        "conceptId": "sem:entity.book",
+        "roles": {
+          "possessor": [
+            "book1"
+          ]
+        },
+        "features": {
+          "values": {}
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "ko'lez lubik'lez lubik"
+  },
+  "mode": "trace",
+  "assertions": []
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "test:en:advanced:072",
+  "name": "pronoun-they: They build the house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "They build the house."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "surface": "They build the house.",
+    "rootConcept": "sem:event.build",
+    "rootType": "Event",
+    "rootFeatures": {
+      "tense": "present"
+    },
+    "roleConcepts": {
+      "agent": "sem:entity.they",
+      "theme": "sem:entity.house"
+    }
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "pronoun-they"
+    }
+  ]
+}

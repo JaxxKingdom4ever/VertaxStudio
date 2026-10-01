@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "comparison-less",
+  "name": "comparison less (provisional stems where bracketed)",
+  "input_stage": "Meaning",
+  "input": {
+    "roots": [
+      "compare"
+    ],
+    "objects": {
+      "person": {
+        "id": "person",
+        "type": "Entity",
+        "conceptId": "sem:entity.person",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "food": {
+        "id": "food",
+        "type": "Entity",
+        "conceptId": "sem:entity.food",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "tall": {
+        "id": "tall",
+        "type": "Property",
+        "conceptId": "sem:property.tall",
+        "roles": {},
+        "features": {
+          "values": {}
+        }
+      },
+      "compare": {
+        "id": "compare",
+        "type": "Relation",
+        "conceptId": "sem:relation.comparison",
+        "roles": {
+          "first": [
+            "person"
+          ],
+          "property": [
+            "tall"
+          ],
+          "second": [
+            "food"
+          ]
+        },
+        "features": {
+          "values": {
+            "degree": "less"
+          }
+        }
+      }
+    }
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "surface": "person'mo ⟦TALL⟧ food"
+  },
+  "mode": "trace",
+  "assertions": []
+}

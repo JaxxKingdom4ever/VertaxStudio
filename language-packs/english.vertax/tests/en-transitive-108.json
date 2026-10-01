@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "test:en:transitive:108",
+  "name": "Productive transitive: The girls see the dogs.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girls see the dogs."
+  },
+  "expected_stage": "Surface",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "surface": "The girls see the dogs."
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "transitive",
+      "tense": "present",
+      "subject_plural": true,
+      "object_plural": true
+    }
+  ]
+}

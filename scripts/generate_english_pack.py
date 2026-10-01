@@ -99,16 +99,6 @@ for word in selected:
 # Deliberate homographs/cross-category entries.
 for word,cls in [('cook','Noun'),('saw','Noun'),('book','Verb'),('can','Modal'),('can','Noun'),('cooked','Adjective')]:add(word,cls)
 for word,cls in CORE.items(): add(word,cls)
-# Two independently defined lexical meanings share the written form "bank".
-# Both live entirely in the editable pack; the analysis engine only sees concepts.
-financial=lexemes[('bank','Noun')]
-financial['conceptId']='sem:entity.bank.financial'
-concepts.pop('sem:entity.bank',None)
-concepts['sem:entity.bank.financial']={'id':'sem:entity.bank.financial','label':'financial bank','semanticType':'Entity','metadata':{}}
-river={**financial,'id':'lex:en:bank:river-noun','conceptId':'sem:entity.bank.river','forms':dict(financial['forms']),
-       'metadata':{**financial['metadata'],'sense':'river edge'}}
-lexemes[('bank','Noun:river')]=river
-concepts['sem:entity.bank.river']={'id':'sem:entity.bank.river','label':'river bank','semanticType':'Entity','metadata':{}}
 
 # Generic syntax templates are JSON data, not source-code special cases.
 def slot(cls=None,form=None,text=None):
@@ -217,14 +207,6 @@ for case_id,sentence,success,n in [
  'input_stage':'OrthographyAnalysis','input':{'text':sentence},'expected_stage':'MeaningAnalysis',
  'expected_output':{'success':success,'candidateCount':n},'mode':'fast','assertions':[{'family':case_id}]})
  case_paths.append(path)
-# A lexical ambiguity is an acceptance property, not just a parser unit test.
-polysemy_path='tests/en-polysemy-bank.json'
-write(polysemy_path,{'schema_version':1,'id':'test:en:polysemy:bank',
-  'name':'bank: distinct financial versus river sense',
-  'input_stage':'OrthographyAnalysis','input':{'text':'The person saw the bank.'},
-  'expected_stage':'MeaningAnalysis','expected_output':{'success':True,'candidateCount':2},
-  'mode':'fast','assertions':[{'family':'lexical-polysemy'}]})
-case_paths.append(polysemy_path)
 for index,case in enumerate(english_acceptance_cases(lexemes),1):
  path=f'tests/en-grammar-{index:03}.json'
  expected={'success':True,'candidateCount':1,'surface':case['sentence'],
@@ -251,10 +233,5 @@ for index,case in enumerate(advanced_acceptance_cases(lexemes),1):
 manifest['tests']=case_paths
 write('project.json',manifest);write('lexicon/lexicon.json',sorted(lexemes.values(),key=lambda x:x['id']));write('features/features.json',[]);write('concepts/concepts.json',sorted(concepts.values(),key=lambda x:x['id']));write('settings.json',{'note':'Bounded English natural-language proof. Not unrestricted English.'});
 Path('language-packs').mkdir(exist_ok=True)
-# English's authoring script must not delete other installed language packs.
-catalog_path=Path('language-packs/index.json')
-catalog=json.loads(catalog_path.read_text()) if catalog_path.exists() else []
-english_entry={'id':'english-pack','path':'english.vertax','capabilities':['analyze','generate']}
-catalog=[english_entry,*[entry for entry in catalog if entry.get('id')!='english-pack']]
-catalog_path.write_text(json.dumps(catalog,indent=2)+'\n')
+Path('language-packs/index.json').write_text(json.dumps([{'id':'english-pack','path':'english.vertax','capabilities':['analyze','generate']}],indent=2)+'\n')
 print('Lexemes:',len(lexemes),'Concepts:',len(concepts),'Patterns:',len(pattern_rules))

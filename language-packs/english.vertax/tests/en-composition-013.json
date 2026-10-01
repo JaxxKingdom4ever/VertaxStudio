@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:013",
+  "name": "Compositional English: The girl saw the boy with the small telescope.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl saw the boy with the small telescope."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 2,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "instrument": "sem:entity.telescope",
+        "theme.association": null
+      },
+      {
+        "instrument": null,
+        "theme.association": "sem:entity.telescope"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

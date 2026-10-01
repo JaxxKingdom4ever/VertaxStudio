@@ -21,12 +21,8 @@ export function resolveNodePorts(state:StudioState,nodeId:StableId):readonly Por
 }
 function error(code:string,message:string,nodeId?:string):Diagnostic{return {severity:'Error',code,message,nodeId}}
 export function checkPortConnection(state:StudioState,source:PortEndpoint,target:PortEndpoint):readonly Diagnostic[]{
-  const from=resolveNodePorts(state,source.nodeId).filter(port=>port.portId===source.portId);
-  const to=resolveNodePorts(state,target.nodeId).filter(port=>port.portId===target.portId);
-  // A node may legally name its input and output both 'value'. Prefer the
-  // direction appropriate to this end of the connection before validating.
-  const sourcePort=from.find(port=>port.direction==='output')??from[0];
-  const targetPort=to.find(port=>port.direction==='input')??to[0];
+  const sourcePort=resolveNodePorts(state,source.nodeId).find(port=>port.portId===source.portId);
+  const targetPort=resolveNodePorts(state,target.nodeId).find(port=>port.portId===target.portId);
   if(!sourcePort||!targetPort)return [error('UNKNOWN_PORT','Connection references an unknown port.',!sourcePort?source.nodeId:target.nodeId)];
   if(sourcePort.direction!=='output'||targetPort.direction!=='input')return [error('PORT_DIRECTION_MISMATCH','Connections must run from an output port to an input port.')];
   if(!sourcePort.acceptedTypes.some(type=>targetPort.acceptedTypes.includes(type)))return [error('PORT_TYPE_MISMATCH',`${sourcePort.acceptedTypes.join('|')} cannot connect to ${targetPort.acceptedTypes.join('|')}.`)];

@@ -9,8 +9,8 @@ const asForm=(value:CompilerValue,separator:string,nodeId?:string):SurfaceForm=>
    for(const morph of value.morphs){
      if(morph.kind==='Zero')continue;
      const between=first?'':(morph.boundaryBefore??separator);
-     if(between)segments.push({kind:'Boundary',text:between,sourceIds:[morph.id,...(morph.sourceIds??[])],nodeIds:nodeId?[nodeId]:[]});
-     segments.push({kind:'Grapheme',text:morph.form,sourceIds:[morph.id,...(morph.sourceIds??[]),...(morph.sourceObjectId?[morph.sourceObjectId]:[])],nodeIds:nodeId?[nodeId]:[]});
+     if(between)segments.push({kind:'Boundary',text:between,sourceIds:[morph.id],nodeIds:nodeId?[nodeId]:[]});
+     segments.push({kind:'Grapheme',text:morph.form,sourceIds:[morph.id,...(morph.sourceObjectId?[morph.sourceObjectId]:[])],nodeIds:nodeId?[nodeId]:[]});
      first=false;
    }
  }else if('kind' in value&&value.kind==='BoundUnit'){

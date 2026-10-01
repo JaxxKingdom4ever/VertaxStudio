@@ -19,6 +19,7 @@ const { registerPersistedNodeGroups }=await import(new URL('../../dist/packages/
 const { NodeRegistry }=await import(new URL('../../dist/packages/runtime/src/node-registry.js',import.meta.url));
 const { registerCorePrimitives }=await import(new URL('../../dist/packages/primitives/src/index.js',import.meta.url));
 const { translateSurface }=await import(new URL('../../dist/packages/translation/src/index.js',import.meta.url));
+const { analyzeSurface }=await import(new URL('../../dist/packages/compiler/src/analyzer.js',import.meta.url));
 
 async function catalog(){
   const items=JSON.parse(await readFile(join(packRoot,'index.json'),'utf8'));
@@ -46,6 +47,21 @@ async function handleApi(req,res,path){
     const pack=await catalogPack(id);
     if(!pack){json(res,404,{code:'UNKNOWN_LANGUAGE_PACK'});return true}
     json(res,200,{format:'vertax-browser-project',version:1,id,project:pack.project});return true;
+  }
+  if(path==='/api/analyze'&&req.method==='POST'){
+    try{
+      const body=await readJsonBody(req);
+      if(typeof body?.text!=='string'||body.text.length>10000||typeof body?.sourcePack!=='string'){
+        json(res,400,{code:'INVALID_ANALYSIS_REQUEST'});return true;
+      }
+      const source=await catalogPack(body.sourcePack);
+      if(!source){json(res,404,{code:'UNKNOWN_LANGUAGE_PACK'});return true}
+      const analyzer=toAnalyzerProject(source.project);
+      if(!analyzer.project){json(res,422,{success:false,candidates:[],diagnostics:analyzer.diagnostics});return true}
+      const registry=new NodeRegistry();registerCorePrimitives(registry);registerPersistedNodeGroups(registry,source.project.nodeGroups);
+      const result=analyzeSurface(analyzer.project,registry,body.text,{mode:'trace',maxStepsPerStage:300});
+      json(res,result.success?200:422,result);return true;
+    }catch(error){json(res,400,{success:false,candidates:[],code:'INVALID_ANALYSIS_REQUEST',message:error instanceof Error?error.message:String(error)});return true;}
   }
   if(path==='/api/translation'&&req.method==='POST'){
     try{

@@ -4,6 +4,7 @@ export * from "./morphology-nodes.js";
 export * from "./grammar-nodes.js";
 export * from "./surface-nodes.js";
 export * from "./analysis-nodes.js";
+export * from "./compositional-syntax.js";
 export * from "./word-realization-nodes.js";
 export * from "./phonology-nodes.js";
 import type { NodeRegistry } from "../../runtime/src/index.js";

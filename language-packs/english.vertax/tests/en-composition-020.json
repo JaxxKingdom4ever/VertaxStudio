@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:020",
+  "name": "Compositional English: The small boy is happy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The small boy is happy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:state.copula",
+    "roleConcepts": {
+      "subject": "sem:entity.boy",
+      "quality": "sem:property.happy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "subject.quality": "sem:property.small"
+      }
+    ],
+    "rootType": "State"
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

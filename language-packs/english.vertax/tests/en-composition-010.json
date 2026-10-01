@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:010",
+  "name": "Compositional English: The person saw the girl with the telescope.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The person saw the girl with the telescope."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 2,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.person",
+      "theme": "sem:entity.girl"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "instrument": "sem:entity.telescope",
+        "theme.association": null
+      },
+      {
+        "instrument": null,
+        "theme.association": "sem:entity.telescope"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

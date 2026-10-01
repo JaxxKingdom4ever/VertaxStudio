@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:016",
+  "name": "Compositional English: The girl quietly saw the happy boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl quietly saw the happy boy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "manner": "sem:property.quietly",
+        "theme.quality": "sem:property.happy"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

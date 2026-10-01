@@ -27,3 +27,17 @@ test('server translates only catalog-listed packs and represents ambiguity expli
   const illegal=await post({sourcePack:'../../etc/passwd',targetPack:'english-pack',text:'x'});assert.equal(illegal.status,404);
  } finally{s.close()}
 });
+test('analysis-only API exposes full English semantic candidates even when generation lacks a matching construction',async()=>{
+ const s=await server();try{
+  const post=body=>fetch(`${s.base}/api/analyze`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});
+  const parsed=await post({sourcePack:'english-pack',text:'The happy small girl saw the boy.'});assert.equal(parsed.status,200);
+  const body=await parsed.json();assert.equal(body.success,true);assert.equal(body.candidates.length,1);
+  const meaning=body.candidates[0].meaning,root=meaning.objects[meaning.roots[0]];
+  assert.equal(root.conceptId,'sem:event.see');
+  const ambiguous=await post({sourcePack:'english-pack',text:'The girl saw the boy with the telescope.'});assert.equal(ambiguous.status,200);
+  assert.equal((await ambiguous.json()).candidates.length,2);
+  const invalid=await post({sourcePack:'../../etc/passwd',text:'x'});assert.equal(invalid.status,404);
+  const unsupported=await post({sourcePack:'english-pack',text:'The girl saw the impossible gizmo.'});assert.equal(unsupported.status,422);
+  assert.equal((await unsupported.json()).candidates.length,0);
+ }finally{s.close()}
+});

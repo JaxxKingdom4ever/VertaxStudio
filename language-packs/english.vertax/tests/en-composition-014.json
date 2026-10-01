@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:014",
+  "name": "Compositional English: The young girl quietly quickly saw the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The young girl quietly quickly saw the boy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "manner.0": "sem:property.quickly",
+        "manner.1": "sem:property.quietly",
+        "agent.quality": "sem:property.young"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

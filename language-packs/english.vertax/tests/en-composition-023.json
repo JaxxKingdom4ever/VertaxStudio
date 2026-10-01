@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:023",
+  "name": "Compositional English: The young girls is happy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The young girls is happy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": false,
+    "candidateCount": 0
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

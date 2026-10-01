@@ -17,9 +17,9 @@ export function registerPhonologyPrimitives(registry:NodeRegistry):void {
       for(const item of morph.morphs){
         if(item.kind==="Zero"){zeroMorphIds.push(item.id);continue;}
         if(tokens.length){
-          tokens.push({kind:"Boundary",boundary:item.boundaryBefore===""?"Affix":"Morpheme",sourceMorphId:item.id,sourceIds:item.sourceIds});
+          tokens.push({kind:"Boundary",boundary:item.boundaryBefore===""?"Affix":"Morpheme",sourceMorphId:item.id});
         }
-        for(const symbol of [...item.form])tokens.push({kind:"Phoneme",symbol,sourceMorphId:item.id,sourceObjectId:item.sourceObjectId,sourceIds:item.sourceIds});
+        for(const symbol of [...item.form])tokens.push({kind:"Phoneme",symbol,sourceMorphId:item.id,sourceObjectId:item.sourceObjectId});
       }
       return {outputs:{value:[{id:`phon:${morph.id}`,valueType:"PhonologicalForm",tokens,zeroMorphIds}]},diagnostics:[]};
     }

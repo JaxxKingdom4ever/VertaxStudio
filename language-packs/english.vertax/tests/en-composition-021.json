@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:021",
+  "name": "Compositional English: The girls read the book.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girls read the book."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 2,
+    "rootConcept": "sem:event.read",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.book"
+    },
+    "candidateRoleConceptPaths": [
+      {},
+      {}
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

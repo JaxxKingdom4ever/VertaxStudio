@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:024",
+  "name": "Compositional English: The happy girls sees the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The happy girls sees the boy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": false,
+    "candidateCount": 0
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

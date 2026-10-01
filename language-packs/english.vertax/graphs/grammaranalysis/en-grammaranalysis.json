@@ -2912,7 +2912,563 @@
                 ]
               }
             }
-          ]
+          ],
+          "compositionalGrammar": {
+            "startSymbol": "S",
+            "maxResults": 64,
+            "maxItems": 24000,
+            "rules": [
+              {
+                "id": "nom-head",
+                "lhs": "NOM",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Noun"
+                      ],
+                      "formKeys": [
+                        "citation",
+                        "plural"
+                      ]
+                    }
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "entity",
+                  "objects": [
+                    {
+                      "id": "entity",
+                      "type": "Entity",
+                      "slot": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "nom-quality",
+                "lhs": "NOM",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Adjective"
+                      ],
+                      "formKeys": [
+                        "citation"
+                      ]
+                    }
+                  },
+                  {
+                    "category": "NOM"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": [
+                    {
+                      "id": "quality",
+                      "type": "Property",
+                      "slot": 0
+                    }
+                  ],
+                  "augmentRoles": [
+                    {
+                      "target": "$1",
+                      "role": "quality",
+                      "value": "quality"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "np-definite",
+                "lhs": "NP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "text": "the"
+                    }
+                  },
+                  {
+                    "category": "NOM"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": [],
+                  "augmentFeatures": [
+                    {
+                      "target": "$1",
+                      "values": {
+                        "definiteness": "definite"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "np-indefinite-a",
+                "lhs": "NP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "text": "a"
+                    }
+                  },
+                  {
+                    "category": "NOM"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": [],
+                  "augmentFeatures": [
+                    {
+                      "target": "$1",
+                      "values": {
+                        "definiteness": "indefinite"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "np-indefinite-an",
+                "lhs": "NP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "text": "an"
+                    }
+                  },
+                  {
+                    "category": "NOM"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": [],
+                  "augmentFeatures": [
+                    {
+                      "target": "$1",
+                      "values": {
+                        "definiteness": "indefinite"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "with-phrase",
+                "lhs": "WITH_PP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "text": "with"
+                    }
+                  },
+                  {
+                    "category": "NP"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": []
+                }
+              },
+              {
+                "id": "nom-with",
+                "lhs": "NOM",
+                "rhs": [
+                  {
+                    "category": "NOM"
+                  },
+                  {
+                    "category": "WITH_PP"
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "$0",
+                  "objects": [],
+                  "augmentRoles": [
+                    {
+                      "target": "$0",
+                      "role": "association",
+                      "value": "$1"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-past",
+                "lhs": "VP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Verb"
+                      ],
+                      "formKeys": [
+                        "past"
+                      ]
+                    }
+                  },
+                  {
+                    "category": "NP"
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "event",
+                  "objects": [
+                    {
+                      "id": "event",
+                      "type": "Event",
+                      "slot": 0,
+                      "roles": {
+                        "theme": [
+                          "$1"
+                        ]
+                      },
+                      "features": {
+                        "tense": "past"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-present-3",
+                "lhs": "VP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Verb"
+                      ],
+                      "formKeys": [
+                        "present3"
+                      ]
+                    }
+                  },
+                  {
+                    "category": "NP"
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "event",
+                  "objects": [
+                    {
+                      "id": "event",
+                      "type": "Event",
+                      "slot": 0,
+                      "roles": {
+                        "theme": [
+                          "$1"
+                        ]
+                      },
+                      "features": {
+                        "tense": "present"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-present-plural",
+                "lhs": "VP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Verb"
+                      ],
+                      "formKeys": [
+                        "citation"
+                      ]
+                    }
+                  },
+                  {
+                    "category": "NP"
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "event",
+                  "objects": [
+                    {
+                      "id": "event",
+                      "type": "Event",
+                      "slot": 0,
+                      "roles": {
+                        "theme": [
+                          "$1"
+                        ]
+                      },
+                      "features": {
+                        "tense": "present"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-instrument",
+                "lhs": "VP",
+                "rhs": [
+                  {
+                    "category": "VP"
+                  },
+                  {
+                    "category": "WITH_PP"
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "$0",
+                  "objects": [],
+                  "augmentRoles": [
+                    {
+                      "target": "$0",
+                      "role": "instrument",
+                      "value": "$1"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "declarative",
+                "lhs": "S",
+                "rhs": [
+                  {
+                    "category": "NP"
+                  },
+                  {
+                    "category": "VP"
+                  },
+                  {
+                    "terminal": {
+                      "text": "."
+                    }
+                  }
+                ],
+                "head": 1,
+                "headConstraint": {
+                  "left": 0,
+                  "right": 1,
+                  "allowedPairs": [
+                    [
+                      "citation",
+                      "past"
+                    ],
+                    [
+                      "plural",
+                      "past"
+                    ],
+                    [
+                      "citation",
+                      "present3"
+                    ],
+                    [
+                      "plural",
+                      "citation"
+                    ]
+                  ]
+                },
+                "meaning": {
+                  "root": "$1",
+                  "objects": [],
+                  "augmentRoles": [
+                    {
+                      "target": "$1",
+                      "role": "agent",
+                      "value": "$0"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-manner",
+                "lhs": "VP",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Adverb"
+                      ]
+                    }
+                  },
+                  {
+                    "category": "VP"
+                  }
+                ],
+                "head": 1,
+                "meaning": {
+                  "root": "$1",
+                  "objects": [
+                    {
+                      "id": "manner",
+                      "type": "Property",
+                      "slot": 0
+                    }
+                  ],
+                  "augmentRoles": [
+                    {
+                      "target": "$1",
+                      "role": "manner",
+                      "value": "manner"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-copula-sg",
+                "lhs": "VPSTATE",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Verb"
+                      ],
+                      "formKeys": [
+                        "present3"
+                      ]
+                    }
+                  },
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Adjective"
+                      ]
+                    }
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "state",
+                  "objects": [
+                    {
+                      "id": "state",
+                      "type": "State",
+                      "conceptId": "sem:state.copula",
+                      "roles": {
+                        "quality": [
+                          "quality"
+                        ]
+                      },
+                      "features": {
+                        "tense": "present"
+                      }
+                    },
+                    {
+                      "id": "quality",
+                      "type": "Property",
+                      "slot": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "vp-copula-pl",
+                "lhs": "VPSTATE",
+                "rhs": [
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Verb"
+                      ],
+                      "formKeys": [
+                        "presentPlural"
+                      ]
+                    }
+                  },
+                  {
+                    "terminal": {
+                      "classes": [
+                        "Adjective"
+                      ]
+                    }
+                  }
+                ],
+                "head": 0,
+                "meaning": {
+                  "root": "state",
+                  "objects": [
+                    {
+                      "id": "state",
+                      "type": "State",
+                      "conceptId": "sem:state.copula",
+                      "roles": {
+                        "quality": [
+                          "quality"
+                        ]
+                      },
+                      "features": {
+                        "tense": "present"
+                      }
+                    },
+                    {
+                      "id": "quality",
+                      "type": "Property",
+                      "slot": 1
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "copular",
+                "lhs": "S",
+                "rhs": [
+                  {
+                    "category": "NP"
+                  },
+                  {
+                    "category": "VPSTATE"
+                  },
+                  {
+                    "terminal": {
+                      "text": "."
+                    }
+                  }
+                ],
+                "head": 1,
+                "headConstraint": {
+                  "left": 0,
+                  "right": 1,
+                  "allowedPairs": [
+                    [
+                      "citation",
+                      "present3"
+                    ],
+                    [
+                      "plural",
+                      "presentPlural"
+                    ]
+                  ]
+                },
+                "meaning": {
+                  "root": "$1",
+                  "objects": [],
+                  "augmentRoles": [
+                    {
+                      "target": "$1",
+                      "role": "subject",
+                      "value": "$0"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       }
     ],

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:005",
+  "name": "Compositional English: The tall girl saw the happy person.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The tall girl saw the happy person."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.person"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "agent.quality": "sem:property.tall",
+        "theme.quality": "sem:property.happy"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

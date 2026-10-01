@@ -28,23 +28,28 @@ export function mountTranslationWorkspace(container:HTMLElement,onOpenPack:(proj
   const output=document.createElement('pre');output.className='translation-surface';resultPanel.append(output);
   const candidatesPanel=document.createElement('div');candidatesPanel.className='translation-candidates';resultPanel.append(candidatesPanel);
   const meaningPanel=document.createElement('pre');meaningPanel.className='translation-meaning';resultPanel.append(meaningPanel);
-  const runButton=button('Analyze and translate',()=>void run());actions.append(runButton);
+  const analyzeButton=button('Analyze only',()=>void run(undefined,'analyze'));
+  const runButton=button('Analyze and translate',()=>void run());actions.append(analyzeButton,runButton);
   const openSource=button('Open source pack in Graph Studio',()=>void open(source.value));const openTarget=button('Open target pack in Graph Studio',()=>void open(target.value));actions.append(openSource,openTarget);
   let requestNumber=0;
-  const run=async(candidateId?:string)=>{
+  const run=async(candidateId?:string,operation:'analyze'|'translate'='translate')=>{
     const ticket=++requestNumber;status.textContent='Analyzing…';output.textContent='';candidatesPanel.replaceChildren();meaningPanel.textContent='';
     try{
-      const response=await fetch('/api/translation',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sourcePack:source.value,targetPack:target.value,text:sourceText.value,...(candidateId?{candidateId}:{})})});
+      const endpoint=operation==='analyze'?'/api/analyze':'/api/translation';
+      const request=operation==='analyze'?{sourcePack:source.value,text:sourceText.value}:{sourcePack:source.value,targetPack:target.value,text:sourceText.value,...(candidateId?{candidateId}:{})};
+      const response=await fetch(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(request)});
       const raw=await response.json() as TranslationViewResult;
       if(ticket!==requestNumber)return;
       const result=translationView(raw);
       const message=result.diagnostics.map(x=>`${x.code}: ${x.message}`).join('\n');
-      status.textContent=result.requiresSelection?'Choose one of the meanings below.':raw.success?'Translation generated.':message||`Translation failed (${response.status}).`;
+      status.textContent=operation==='analyze'
+        ? raw.success?(result.candidates.length===1?'Analysis completed.':`${result.candidates.length} meanings found.`):message||`Analysis failed (${response.status}).`
+        :result.requiresSelection?'Choose one of the meanings below.':raw.success?'Translation generated.':message||`Translation failed (${response.status}).`;
       output.textContent=result.surface??'';
       if(result.candidates.length){
         const heading=document.createElement('h3');heading.textContent=result.candidates.length===1?'Confirmed semantic graph':'Interpretation candidates';candidatesPanel.append(heading);
         for(const c of result.candidates){
-          const candidateButton=button(`Interpretation ${c.id}`,()=>{meaningPanel.textContent=JSON.stringify(c.meaning,null,2);if(result.requiresSelection)void run(c.id)});
+          const candidateButton=button(`Interpretation ${c.id}`,()=>{meaningPanel.textContent=JSON.stringify(c.meaning,null,2);if(operation==='translate'&&result.requiresSelection)void run(c.id)});
           candidatesPanel.append(candidateButton);
         }
         if(result.candidates.length===1)meaningPanel.textContent=JSON.stringify(result.candidates[0]?.meaning,null,2);
@@ -61,7 +66,7 @@ export function mountTranslationWorkspace(container:HTMLElement,onOpenPack:(proj
     for(const [el,entries] of [[source,choices.sources],[target,choices.targets]] as const){
       el.replaceChildren();for(const item of entries){const opt=document.createElement('option');opt.value=item.id;opt.textContent=item.id;el.append(opt)}
     }
-    if(!choices.sources.length||!choices.targets.length){runButton.disabled=true;status.textContent='No compatible language packs are installed.'}
+    if(!choices.sources.length||!choices.targets.length){analyzeButton.disabled=!choices.sources.length;runButton.disabled=!choices.sources.length||!choices.targets.length;status.textContent='No compatible language packs are installed.'}
     else{sourceText.value='The person cooks the food.';status.textContent='Choose languages and analyze a source sentence.'}
-  }).catch(err=>{runButton.disabled=true;status.textContent=`Language-pack catalog unavailable: ${err instanceof Error?err.message:String(err)}`});
+  }).catch(err=>{analyzeButton.disabled=true;runButton.disabled=true;status.textContent=`Language-pack catalog unavailable: ${err instanceof Error?err.message:String(err)}`});
 }

@@ -1085,7 +1085,7 @@
   },
   {
     "id": "lex:en:bank:noun",
-    "conceptId": "sem:entity.bank.financial",
+    "conceptId": "sem:entity.bank",
     "lexicalClass": "Noun",
     "forms": {
       "citation": "bank",
@@ -1102,28 +1102,6 @@
     "metadata": {
       "frequency": 109,
       "formStatus": "plural-derived"
-    }
-  },
-  {
-    "id": "lex:en:bank:river-noun",
-    "conceptId": "sem:entity.bank.river",
-    "lexicalClass": "Noun",
-    "forms": {
-      "citation": "bank",
-      "plural": "banks",
-      "possessive": "bank's",
-      "pluralPossessive": "banks'"
-    },
-    "features": {
-      "values": {}
-    },
-    "valency": [],
-    "relatedLexemes": {},
-    "irregularRuleIds": [],
-    "metadata": {
-      "frequency": 109,
-      "formStatus": "plural-derived",
-      "sense": "river edge"
     }
   },
   {

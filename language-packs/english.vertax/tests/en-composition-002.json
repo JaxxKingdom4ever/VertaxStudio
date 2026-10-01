@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:002",
+  "name": "Compositional English: The young tall girl saw the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The young tall girl saw the boy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.boy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "agent.quality.0": "sem:property.tall",
+        "agent.quality.1": "sem:property.young"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

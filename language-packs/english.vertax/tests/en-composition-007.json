@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:007",
+  "name": "Compositional English: The girl saw the bright old house.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The girl saw the bright old house."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.girl",
+      "theme": "sem:entity.house"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "theme.quality.0": "sem:property.old",
+        "theme.quality.1": "sem:property.bright"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

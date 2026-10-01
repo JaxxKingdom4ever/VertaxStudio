@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:017",
+  "name": "Compositional English: The tall girl is happy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The tall girl is happy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:state.copula",
+    "roleConcepts": {
+      "subject": "sem:entity.girl",
+      "quality": "sem:property.happy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "subject.quality": "sem:property.tall"
+      }
+    ],
+    "rootType": "State"
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

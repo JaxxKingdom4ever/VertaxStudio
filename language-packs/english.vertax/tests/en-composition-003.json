@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:003",
+  "name": "Compositional English: The old happy boy saw the person.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The old happy boy saw the person."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:event.see",
+    "roleConcepts": {
+      "agent": "sem:entity.boy",
+      "theme": "sem:entity.person"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "agent.quality.0": "sem:property.happy",
+        "agent.quality.1": "sem:property.old"
+      }
+    ]
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

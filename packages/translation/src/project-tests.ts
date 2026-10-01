@@ -32,6 +32,40 @@ export function runPersistedPackTests(project:LoadedVertaxProject, registry:Node
    const result=analyzeSurface(analyzer,registry,test.input.text,options);
    if(typeof expected.success==='boolean'&&result.success!==expected.success)throw Error(`Expected success ${expected.success}, got ${result.success}: ${result.diagnostics.map(d=>d.code).join(',')}`);
    if(typeof expected.candidateCount==='number'&&result.candidates.length!==expected.candidateCount)throw Error(`Expected ${expected.candidateCount} meaning candidates, got ${result.candidates.length}.`);
+   // Test all ambiguity alternatives independently of the hash-derived candidate
+   // ordering. A path is a sequence of semantic roles starting at the root;
+   // null explicitly asserts that a role is absent in that interpretation.
+   if(expected.candidateRoleConceptPaths!==undefined){
+    if(!Array.isArray(expected.candidateRoleConceptPaths)||!expected.candidateRoleConceptPaths.every(record))
+      throw Error('candidateRoleConceptPaths must be an array of role-path maps.');
+    const descriptors=expected.candidateRoleConceptPaths as Record<string,unknown>[];
+    if(descriptors.length!==result.candidates.length)throw Error(`Expected ${descriptors.length} candidate role maps, got ${result.candidates.length} candidates.`);
+    const matches=(index:number,description:Record<string,unknown>):boolean=>{
+     const meaning=result.candidates[index]!.meaning;
+     return Object.entries(description).every(([path,concept])=>{
+      if(concept!==null&&typeof concept!=='string')return false;
+      let id:string|undefined=meaning.roots[0];
+      const steps=path.split('.');
+      for(let n=0;n<steps.length;n++){
+       const role=steps[n]!;
+       if(!role||/^\d+$/.test(role))return false;
+       let index=0;
+       if(/^\d+$/.test(steps[n+1]??'')){index=Number(steps[++n]);}
+       id=id?meaning.objects[id]?.roles[role]?.[index]:undefined;
+      }
+      const actual=id?meaning.objects[id]?.conceptId:undefined;
+      return concept===null?actual===undefined:actual===concept;
+     });
+    };
+    const assign=(position:number,used:Set<number>):boolean=>{
+     if(position===descriptors.length)return true;
+     for(let i=0;i<result.candidates.length;i++)if(!used.has(i)&&matches(i,descriptors[position]!)){
+      used.add(i);if(assign(position+1,used))return true;used.delete(i);
+     }
+     return false;
+    };
+    if(!assign(0,new Set()))throw Error('Candidate semantic role paths do not match the expected interpretation set.');
+   }
    if(typeof expected.rootConcept==='string'&&result.candidates[0]?.meaning.objects[result.candidates[0]?.meaning.roots[0]??'']?.conceptId!==expected.rootConcept)throw Error('Root semantic concept mismatch.');
    const graph=result.candidates[0]?.meaning;
    const root=graph?.objects[graph.roots[0]??''];

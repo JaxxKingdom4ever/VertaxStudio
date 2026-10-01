@@ -15,3 +15,11 @@ test('English analyzer does not leak source lexeme form keys into language-neutr
  assert.equal(out.success,true);
  for(const object of Object.values(out.candidates[0].meaning.objects))assert.equal('formKey' in object.features.values,false);
 });
+test('semantic identity is independent of parser-generated object names but preserves shared referents',()=>{
+ const obj=(id,type,conceptId,roles={})=>({id,type,conceptId,roles,features:{values:{}}});
+ const a={roots:['ev'],objects:{ev:obj('ev','Event','sem:event.see',{agent:['p'],theme:['t']}),p:obj('p','Entity','sem:person'),t:obj('t','Entity','sem:person')}};
+ const b={roots:['event@17'],objects:{'event@17':obj('event@17','Event','sem:event.see',{agent:['first'],theme:['second']}),first:obj('first','Entity','sem:person'),second:obj('second','Entity','sem:person')}};
+ const c={roots:['e'],objects:{e:obj('e','Event','sem:event.see',{agent:['same'],theme:['same']}),same:obj('same','Entity','sem:person')}};
+ assert.equal(semanticFingerprint(a),semanticFingerprint(b));
+ assert.notEqual(semanticFingerprint(a),semanticFingerprint(c));
+});

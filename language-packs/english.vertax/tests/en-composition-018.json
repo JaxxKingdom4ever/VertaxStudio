@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:018",
+  "name": "Compositional English: The young girls are happy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The young girls are happy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:state.copula",
+    "roleConcepts": {
+      "subject": "sem:entity.girl",
+      "quality": "sem:property.happy"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "subject.quality": "sem:property.young"
+      }
+    ],
+    "rootType": "State"
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

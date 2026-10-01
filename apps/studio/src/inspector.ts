@@ -31,7 +31,7 @@ export function renderInspector(container:HTMLElement,state:StudioState,onChange
           const raw=input instanceof HTMLInputElement&&input.type==='checkbox'?input.checked:input.value;
           const parsed=parseTypedParameter(descriptor,raw,Object.keys(state.project.tables));
           const updated=updateNodeParams(state,model.nodeId,{...model.params,[descriptor.id]:parsed});
-          updated.diagnostics.length?onError?.(updated.diagnostics[0].message):queueMicrotask(()=>onChange(updated.state));
+          updated.diagnostics.length?onError?.(updated.diagnostics[0].message):onChange(updated.state);
         }catch(error){onError?.(error instanceof Error?error.message:String(error))}
       };
       wrapper.append(input);container.append(wrapper);

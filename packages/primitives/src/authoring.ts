@@ -6,21 +6,7 @@ const table=(id:string,label=id):NodeParameterDescriptor=>({id,label,kind:'table
 const choice=(id:string,label:string,options:string[]):NodeParameterDescriptor=>({id,label,kind:'select',options});
 const crossings=[bool('crossMorpheme','Cross morphemes'),bool('crossSyllable','Cross syllables'),bool('crossWord','Cross words')];
 const context=[text('target','Target phoneme'),text('left','Left context'),text('right','Right context'),...crossings];
-const numeric=(id:string,label=id):NodeParameterDescriptor=>({id,label,kind:'number'});
-const morphTarget=[numeric('targetIndex','Morph index (0-based)'),text('targetId','Morph ID (optional)')];
 const entries:Record<string,NodeAuthoring>={
- 'morph.root':{label:'Root morph',category:'Morphology',keywords:['stem','lexeme'],description:'Create an abstract root from a grammar morph candidate.',parameters:[text('form','Form override')]},
- 'morph.affix':{label:'Attach affix',category:'Morphology',keywords:['prefix','suffix','bound'],description:'Attach a prefix or suffix as a separate morph without inserting spelling punctuation.',parameters:[choice('position','Position',['Prefix','Suffix']),text('form','Form'),text('sourceObjectId','Meaning source')]},
- 'morph.prefix':{label:'Prefix',category:'Morphology',parameters:[text('form','Prefix form'),text('sourceObjectId','Meaning source')]},
- 'morph.suffix':{label:'Suffix',category:'Morphology',parameters:[text('form','Suffix form'),text('sourceObjectId','Meaning source')]},
- 'morph.circumfix':{label:'Circumfix',category:'Morphology',description:'Linked prefix and suffix carrying one meaning/source identity.',parameters:[text('prefix','Prefix'),text('suffix','Suffix'),text('sourceObjectId','Meaning source')]},
- 'morph.zero':{label:'Zero morph',category:'Morphology',keywords:['null','unmarked'],description:'Preserve a feature marker that contributes no phonemes.',parameters:[text('featureId','Feature ID')]},
- 'morph.select-allomorph':{label:'Select allomorph',category:'Morphology',keywords:['allomorphy','irregular','variants','conditional'],description:'Select from project-table rows or JSON candidates using specificity → priority → non-fallback; unresolved ties produce an error.',parameters:[table('tableId','Allomorph table'),json('candidates','Candidate rules'),...morphTarget,text('featureId','Feature for zero form')]},
- 'morph.order':{label:'Order morphs',category:'Morphology',keywords:['linearization','permutation'],description:'Reorder morphs using each index exactly once.',parameters:[json('order','Index permutation')]},
- 'morph.fuse':{label:'Fuse morphs',category:'Morphology',keywords:['portmanteau','merger'],description:'Fuse adjacent nonzero morphs, preserving all sources and rejecting feature conflicts.',parameters:[numeric('start','First morph index'),numeric('count','Number of morphs'),text('form','Fused form (optional)')]},
- 'morph.reduplicate':{label:'Reduplicate',category:'Morphology',keywords:['copy','repeat','full','partial'],parameters:[choice('mode','Extent',['full','partial']),choice('position','Side',['Prefix','Suffix']),numeric('length','Partial length'),...morphTarget]},
- 'morph.mutate':{label:'Mutate morph',category:'Morphology',keywords:['internal change','ablaut','vowel mutation'],parameters:[text('from','Find'),text('to','Replacement'),bool('all','All occurrences'),...morphTarget]},
- 'morph.agreement':{label:'Agreement',category:'Morphology',keywords:['concord','controller','inflection'],description:'Copy selected typed features from a semantic controller to one morph.',parameters:[json('features','Target feature → controller feature'),text('controllerId','Controller meaning ID'),...morphTarget]},
  'phon.from-morphs':{label:'Morphs to phonemes',category:'Phonology',description:'Convert a morph sequence into phonological tokens.'},
  'phon.output':{label:'Phonology output',category:'Phonology'},
  'phon.environment-match':{label:'Environment match',category:'Phonology',keywords:['context','boundary'],description:'Pass only phonological forms matching this environment.',parameters:context},

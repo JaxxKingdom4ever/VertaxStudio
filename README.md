@@ -2,17 +2,15 @@
 
 This repository is a **recovered development branch**, not the original complete Phase 7A history. The original Phase 4–6 source checkout was lost; this branch was reconstructed from the surviving Phase 3 ZIP. It is deliberately kept separate from that older `main` until the missing release requirements are rebuilt and independently verified.
 
-## Development priority: analysis-first
-
-**English is the working reference for generic language analysis**, not the author's constructed language. Prioritize productive parsing across different grammatical constructions, lexical ambiguity, scoped/coreferential meaning, shared semantic interoperability, and independent linguistic evaluation. The reference-conlang subset remains a backwards-compatibility/stress-test fixture where it exposes general compiler gaps; its linguistic completion is not a prerequisite for broader English analysis or packaging. Never invent unconfirmed conlang forms to fill development checkboxes. Future natural-language packs must be built from the same public graph and lexicon APIs, not special-cased in runtime code.
-
 ## Current verified capabilities
 
 - Deterministic, graph-driven **four-stage generation**: Grammar → Morphology → optional Phonology → Surface. Older three-stage projects continue to run unchanged. `phon.from-morphs` exposes boundary and zero-morph tokens; the recovered generic phonology library supplies boundary-aware environment matching, replacement, deletion, insertion, metathesis, assimilation, stress, syllabification, harmony, lenition and fortition. These primitives operate on structured phonological tokens; they do **not** establish that every capability and test from the lost original Phase 5 was recovered.
 - Persisted, executable `node-group:<id>` with typed ports, parameter defaults, nesting and recursion diagnostics.
 - Branch-safe graph scheduling: inactive branches do not masquerade as cycles, and variadic collectors wait for all producers.
 - A language-neutral reverse-analysis pipeline, English lexicon/grammar pack and translation through confirmed MeaningGraph candidates.
-- A **bounded** English pack with a 380-case persisted corpus. It is not unrestricted English. Generic reverse analysis now preserves *all compatible lexical readings* through syntax constraints; the English pack includes distinct financial-bank versus river-bank senses and requests disambiguation for an otherwise unresolved sentence. The grammar still relies on fixed-length templates, which is the next generalization target.
+- A **bounded** English pack with a **405-case persisted corpus**. Its original 35 fixed grammar patterns are now complemented by 16 persisted **compositional productions** for reusable noun phrases, recursively stacked adjectives/adverbs, simple transitive verb phrases, copular states, prepositional phrases, and genuinely ambiguous PP attachments. The same rules combine across different nouns, adjectives and verbs without new whole-sentence templates. It is **not unrestricted English**: lexical valency, more word-order variation, arbitrary subordinate structures, and full generation parity remain development work.
+- Source-language analysis preserves lexical alternatives such as the present/past form *read*; a source phrase with two syntactic derivations of the **same meaning** is shown once, while different coreference or PP attachments remain distinct. Both fixed and compositional parsers have explicit ambiguity budgets and reject non-consuming category cycles.
+- Studio offers a separate **Analyze only** action that exposes all English MeaningGraph interpretations even when target-language generation does not yet cover the corresponding sentence. The read-only `/api/analyze` route works against catalog-listed language packs and returns source-analysis diagnostics independently of translation.
 - A new, genuinely project-authored **reference-conlang recovery subset** at `examples/reference-language.vertax`. It includes 34 authored word patterns, a reusable persisted Node Group, shared semantic concepts, lexical forms, and **59 Meaning→Surface persisted cases** for interrogatives, tense/aspect, negation, pronouns, an imperative, recursive possession (up to six levels in the corpus), nested modality, and the recovered complement/conditional mechanisms. Its canonical sentence remains `person'vo duru esi'cook food`.
 - Generic authored word patterns can now expand nested semantic role targets (including many-valued lists with separators), attach bound morphology to the expanded final word, and track typed nested Scope/Requirement obligations. Recursive semantic cycles and unexpanded structured roles return explicit diagnostics. This logic is not tied to the reference conlang.
 - Complement calls resolve typed requirements through nested scopes, and structural conditional relations require a `clause: conditional` semantic feature on their subordinate event. The project places the `-sa` affix on a personal conditional's subject (including a recursively possessed subject) or on the verb for an impersonal conditional. Conditional and consequent negation stay separate. `requiredFeatures` on a role expansion is a **generic project-authored** constraint, not a conlang-specific runtime branch.
@@ -22,9 +20,8 @@ This repository is a **recovered development branch**, not the original complete
 - English → reference-conlang translation using the same generic compiler, including present, past, future, progressive, negative, pronoun and perfect forms when source analysis produces supported concepts.
 - Studio Analysis / Translation exposes a read-only catalog with English and the reference-conlang subset as selectable packs. Both can be opened for inspection like ordinary `.vertax` projects.
 - **Restored Sentence Lab / Meaning Composer:** project navigation offers Form/Tree/Graph views over one confirmed MeaningGraph; compilation exposes Final, Gloss (including `∅`), Structure, Trace and Errors panels, breakpoint-aware immutable rule snapshots, scope/Requirement inspections, and source-mapped final spans. Successful results can be saved as persisted project tests. The Test workspace runs project tests.
-- **Recovered morphology authoring:** root, affix/prefix/suffix, linked circumfix, zero morph, allomorph selection, ordering, fusion, reduplication, mutation and semantic-controller agreement are generic graph primitives. Selection ranks candidate constraints by **specificity → numeric priority → non-fallback**, with an error for unresolved ties; records can be stored in project data tables. Fusion/reduplication source identities survive phonology into Surface source maps.
-- **Recovered Studio realization authoring:** Morphology, Phonology and Surface nodes have human labels, search categories, typed parameter controls (including an available-table picker), and an advanced JSON editor. Orthography can use project spelling tables, explicit boundary glyphs, capitalization, punctuation and provenance-preserving rewrites. This is a reconstruction, not an assertion of parity with the lost original UI.
-- Studio workflow regressions now cover morphology-node search/insertion/typed parameters/wiring/export/import/undo/redo and simulated DOM pointer-drag/pan transactions. Each drag/pan is committed once on release, and the port resolver handles input and output sockets sharing the same name. The Studio HTTP surface and browser module import closure are also tested. **A real Chromium click-through under normal URL navigation remains unverified** because this sandbox refuses localhost and file navigation with `ERR_BLOCKED_BY_ADMINISTRATOR`. An injected-Chromium pass now exercises the emitted browser modules with real mouse/keyboard events and a proxy to the actual local Studio API, including editable MeaningGraph Form/Tree/Graph views, Phonology authoring, Surface table selection, trace/provenance inspection, and Save-as-test → export/import → project save → executable corpus verification.
+- **Recovered Studio realization authoring:** phonology and Surface nodes have human labels, search categories, typed parameter controls (including an available-table picker), and an advanced JSON editor. Orthography can use project spelling tables, explicit boundary glyphs, capitalization, punctuation and provenance-preserving rewrites. This is a reconstruction, not an assertion of parity with the lost original UI.
+- Browser module import closure is tested to exclude Node-only filesystem dependencies; the Studio HTTP surface is smoke-tested. A real interactive Chromium page run is blocked by the current sandbox browser policy, so end-user click-through remains an outstanding verification item.
 - Generic persisted graph validation rejects dangling edges, bindings, duplicate graph-node IDs and missing Node Group dependencies.
 
 ## Try it
@@ -36,6 +33,8 @@ npm test
 npm run typecheck
 npm run studio
 # Open http://127.0.0.1:4173 and select Analysis / Translation.
+# Choose English and Analyze only to inspect the MeaningGraph independently
+# of whether the target language can regenerate the entire sentence.
 ```
 
 For headless translation:
@@ -53,41 +52,12 @@ node dist/apps/cli/src/main.js translate-project language-packs/english.vertax e
 
 The reference `.vertax` generation rules are in `examples/reference-language.vertax/node-groups/reference-clause.json`, its lexicon in `lexicon/lexicon.json`, and its tests in `tests/`. The `scripts/generate_reference_pack.py` script reproduces its authored resource documents; it does not add reference-language grammar branches to the compiler.
 
-
-### Morphology authoring in Studio
-
-Open Studio, choose **Morphology**, then press **Space** on the graph canvas and search for **Select allomorph**. Create and connect it to a `MorphSequence` producer. The Inspector exposes a project **Allomorph table** picker or **Candidate rules (JSON)**. A candidate list can look like:
-
-```json
-[
-  {"form":"went","when":{"tense":"past"},"priority":2},
-  {"form":"go","fallback":true}
-]
-```
-
-`when` compares against typed morph features, not letters in the eventual surface string. Exact ties are rejected with `AMBIGUOUS_ALLOMORPH`; absent matches report `NO_MATCHING_ALLOMORPH`. An empty selected form remains an explicit zero morph. Prefixes, suffixes, circumfixes, fusion, and reduplication are abstract until Phonology/Surface determine boundaries and spelling. The Inspector retains an advanced JSON fallback, and the project can be exported as `.vertax.json`.
-
-For a true on-device browser acceptance pass, start `npm run studio` and run `python scripts/studio-browser-smoke.py` after installing Playwright and its Chromium browser locally. The sandbox used for recovery blocks browser URL navigation, so a **normal navigated browser pass remains required before release**.
-
-In restricted CI, an additional **real Chromium DOM/interaction pass** can run without browser navigation:
-
-```bash
-npm run studio:build
-node scripts/studio-offline-bundle.mjs
-python scripts/studio-browser-injected-smoke.py
-```
-
-It loads the emitted Studio browser module closure and real Studio HTML/CSS into Chromium `about:blank`, then proxies UI API calls to a temporary *real* Studio server. It tests drag, pan, port wiring, Node Shelf, typed Inspector, Undo/Redo, English→conlang translation and ambiguity, opening packs, Phonology node authoring, Surface table selection, Meaning Composer Form/Tree/Graph edits affecting actual compilation, Sentence Lab trace/source provenance, test authoring, import/export and Save. The isolated saved project must then execute all 59 reference cases plus the newly authored test (60/60). The save target is isolated in a temporary folder, so the canonical packs are never overwritten. The generated `.studio-browser-bootstrap.js` and `.studio-browser-screenshot.png` are ignored. **This does not verify a normal browser navigation or resource loading.** Direct Chromium navigation to both localhost and `file://` was retried in this sandbox and returned `net::ERR_BLOCKED_BY_ADMINISTRATOR`; an unrestricted on-device navigation pass is still a separate release gate.
-
 ## Critical gaps before full Phase 7A / desktop release
 
-1. **Generalize English analysis beyond fixed-length surface templates**: compositional noun/verb phrases, productive embedding, agreement and inflection, PP/relative attachment, quantifier and coreference scope, and a representative held-out corpus with hand-reviewed semantics. Report what fails instead of guessing a single meaning. Broadened English analysis takes precedence over enlarging the conlang fixture.
-2. Review lexicon inflections and polysemy, expand cross-linguistic semantic contracts, and perform independent linguistic evaluation before claiming unrestricted English/Spanish/Turkish translation. The current multiple-sense English example proves hypothesis preservation, not general word-sense disambiguation.
-3. Compare the recovered Sentence Lab, phonology and morphology APIs against the surviving original specs and finish the browser navigation/release checks. The injected-Chromium pass is real interaction testing but not an ordinary browser navigation smoke.
-
+1. Rebuild the rest of the **original Phase 6 reference conlang**, including conjoining/word-boundary details for actual complement callers, full combinations of conditional/tense/aspect features, dynamic coordination's *attested lexical stems*, full comparative gap behavior, semantic definiteness and attested possession trails. Generic recursion, typed modal and complement scopes, basic possessive chains, and **bounded** conditional realization are now implemented. The current 59 cases are a **new replacement corpus**, not the original tests that were lost. To avoid fabricating vocabulary, the new complement tests reuse the attested `duru` form as a **provisional sample caller**; its lexical/conjoining semantics and exact wording, as well as the complex possession/stacked modality surface forms, still require review against the author's complete grammar.
+2. **Review the recovered Sentence Lab and phonology implementation against the lost Phase 4–5 specification**. The new debugger, editor, sound-rule nodes and source-mapped orthography are functional and regression-tested, but original coverage cannot be certified from the surviving files. A full real-browser manual interaction test remains to be run outside this sandbox (Chromium navigation here reports `ERR_BLOCKED_BY_ADMINISTRATOR`). Rebuild any unverified full-morphology/allomorphy features before claiming full original Phase 5 parity.
+3. Generalize the English parser beyond its known bounded templates, review lexicon inflections, expand cross-linguistic semantic coverage, and perform independent linguistic evaluation before claiming unrestricted English/Spanish/Turkish translation.
 4. Complete all native desktop packaging, installability, project life-cycle and release testing in the later desktop phase.
-
-The 59-case reference-conlang fixture stays as opt-in generic-engine regression coverage. Attested lexical/conjoining details and complex possession/modality surface forms are still provisional; only revisit them when they uncover a general capability gap or the author explicitly requests language work.
 
 The source-code `examples/reference-slice` fixture still contains the original `ref.*` compatibility nodes; **the new canonical reference-language project never uses them**. Removing that fixture safely is separate compatibility work, so do not claim the repository already satisfies the original source-exception removal gate.
 
@@ -96,3 +66,9 @@ The source-code `examples/reference-slice` fixture still contains the original `
 When exporting a recovery ZIP, include `.git` so branch and commit history survive across sandbox resets. The reconstructed history is **not** the lost original Phase 4–7A history. The recovery branch is intentionally separate from the original older `main`.
 
 For English lexicon origins and review limitations, see `language-packs/english.vertax/LEXICON_SOURCES.md`.
+
+### English compositional-analysis examples
+
+The new grammar data is authored at `language-packs/english.vertax/graphs/grammaranalysis/en-grammaranalysis.json`, under `compositionalGrammar`. Repeated `NOM → Adjective NOM` and `VP → Adverb VP` rules model additional modifiers without adding entire sentences to the compiler. `VP → VP WITH_PP` and `NOM → NOM WITH_PP` retain both valid readings of *The girl saw the boy with the telescope.* The shared semantic fingerprint collapses derivational duplicates **without** merging interpretations that have different role attachments.
+
+The persisted `en-composition-*.json` tests additionally assert meaning paths such as `agent.quality.0`, `agent.quality.1`, `instrument`, and `theme.association`. A `null` path expectation verifies an absent role. The optional real-browser script, `python scripts/browser-english-analysis-smoke.py`, exercises Analyze only and ambiguity selection on systems that allow local Chromium navigation; the current execution environment rejects Chromium navigation with `ERR_BLOCKED_BY_ADMINISTRATOR`, so the portable server/UI model tests are the verified fallback.

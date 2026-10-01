@@ -62,7 +62,7 @@ export function spellPhonologicalForm(phon:PhonologicalForm,resources:ProjectRes
      text=typeof params.stress==='object'&&params.stress!==null?String((params.stress as Record<string,unknown>)[token.level]??''):'';
      kind='Boundary';
    }
-   if(text)segments.push({text,kind,sourceIds:unique([token.sourceMorphId,...(token.sourceIds??[]),...(token.kind==='Phoneme'?[token.sourceObjectId]:[])].filter((x):x is string=>!!x)),nodeIds:nodeId?[nodeId]:[]});
+   if(text)segments.push({text,kind,sourceIds:unique([token.sourceMorphId,...(token.kind==='Phoneme'?[token.sourceObjectId]:[])].filter((x):x is string=>!!x)),nodeIds:nodeId?[nodeId]:[]});
  }
  return {value:surfaceFromSegments(`surface:${phon.id}`,segments)};
 }

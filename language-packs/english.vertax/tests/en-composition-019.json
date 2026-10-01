@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:019",
+  "name": "Compositional English: The tall person is red.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The tall person is red."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": true,
+    "candidateCount": 1,
+    "rootConcept": "sem:state.copula",
+    "roleConcepts": {
+      "subject": "sem:entity.person",
+      "quality": "sem:property.red"
+    },
+    "candidateRoleConceptPaths": [
+      {
+        "subject.quality": "sem:property.tall"
+      }
+    ],
+    "rootType": "State"
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

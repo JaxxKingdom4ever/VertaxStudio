@@ -132,14 +132,8 @@
     "metadata": {}
   },
   {
-    "id": "sem:entity.bank.financial",
-    "label": "financial bank",
-    "semanticType": "Entity",
-    "metadata": {}
-  },
-  {
-    "id": "sem:entity.bank.river",
-    "label": "river bank",
+    "id": "sem:entity.bank",
+    "label": "bank",
     "semanticType": "Entity",
     "metadata": {}
   },

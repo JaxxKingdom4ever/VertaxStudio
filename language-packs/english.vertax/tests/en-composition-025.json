@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "test:en:composition:025",
+  "name": "Compositional English: The flibbertigibbet saw the boy.",
+  "input_stage": "OrthographyAnalysis",
+  "input": {
+    "text": "The flibbertigibbet saw the boy."
+  },
+  "expected_stage": "MeaningAnalysis",
+  "expected_output": {
+    "success": false,
+    "candidateCount": 0
+  },
+  "mode": "fast",
+  "assertions": [
+    {
+      "family": "compositional-english"
+    }
+  ]
+}

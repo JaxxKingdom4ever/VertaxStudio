@@ -28,7 +28,22 @@ function normalize(input:unknown):unknown {
 }
 /** Stable browser-safe hash. Structural equality, not text equality, controls deduplication. */
 export function semanticFingerprint(graph:SemanticGraph):string {
-  const json=JSON.stringify(normalize(graph));
+  // Node IDs are stable handles inside a graph, not semantic content. A bottom-up
+  // parser can derive the same meaning by different phrase-boundary paths.
+  // Traverse from roots and assign canonical numbers, preserving coreference
+  // (revisiting an object is a reference, not a second object).
+  const seen=new Map<string,number>();
+  const visit=(id:string):unknown=>{
+    if(seen.has(id))return {ref:seen.get(id)};
+    const object=graph.objects[id];
+    if(!object)return {missing:id};
+    const ordinal=seen.size;seen.set(id,ordinal);
+    return {node:ordinal,type:object.type,conceptId:object.conceptId??null,
+      features:normalize(object.features),
+      roles:Object.fromEntries(Object.keys(object.roles).sort().map(role=>
+        [role,object.roles[role]!.map(visit)]))};
+  };
+  const json=JSON.stringify(graph.roots.map(visit));
   let hash=0xcbf29ce484222325n;
   for(let i=0;i<json.length;i++){hash=BigInt.asUintN(64,(hash^BigInt(json.charCodeAt(i)))*0x100000001b3n);}
   return `meaning:${hash.toString(16).padStart(16,"0")}`;

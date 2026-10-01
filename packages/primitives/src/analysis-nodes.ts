@@ -6,6 +6,7 @@ import type { NodeRegistry, PortDefinition } from "../../runtime/src/index.js";
 import type { Lexeme } from "./lexicon.js";
 import type { ProjectResources } from "./project-resources.js";
 import { findLexemeByConcept } from "./lexicon.js";
+import {composeSyntaxPatterns,type CompositionalGrammar} from './compositional-syntax.js';
 
 const inPort=(type:string):PortDefinition=>({id:"value",direction:"input",acceptedTypes:[type],cardinality:"ONE",required:true});
 const outPort=(type:string,required=true):PortDefinition=>({id:"value",direction:"output",acceptedTypes:[type],cardinality:"MANY",required});
@@ -61,70 +62,53 @@ interface SlotConstraint {readonly leftSlot:number;readonly rightSlot:number;rea
 interface SyntaxPattern { readonly id:string; readonly slots:readonly SlotPattern[]; readonly slotConstraints?:readonly SlotConstraint[]; readonly meaning:MeaningTemplate; }
 function isRecord(v:unknown):v is Record<string,unknown>{return !!v&&typeof v==="object"&&!Array.isArray(v);}
 function isPattern(v:unknown):v is SyntaxPattern {
-  const validSlot=(x:unknown):x is SlotPattern=>isRecord(x)&&
-    (x.text===undefined||typeof x.text==="string")&&
-    ["classes","formKeys","conceptIds","lexemeIds"].every(field=>
-      x[field]===undefined||Array.isArray(x[field])&&(x[field] as unknown[]).every(item=>typeof item==="string"));
-  if(!isRecord(v)||typeof v.id!=="string"||!Array.isArray(v.slots)||!v.slots.every(validSlot)||
-    !isRecord(v.meaning)||typeof v.meaning.root!=="string"||!Array.isArray(v.meaning.objects))return false;
-  return v.slotConstraints===undefined||Array.isArray(v.slotConstraints)&&v.slotConstraints.every(rule=>
-    isRecord(rule)&&Number.isInteger(rule.leftSlot)&&Number.isInteger(rule.rightSlot)&&
-    (rule.leftSlot as number)>=0&&(rule.rightSlot as number)>=0&&
-    (rule.leftSlot as number)<(v.slots as unknown[]).length&&(rule.rightSlot as number)<(v.slots as unknown[]).length&&
-    Array.isArray(rule.allowedPairs)&&rule.allowedPairs.every(pair=>
-      Array.isArray(pair)&&pair.length===2&&pair.every(x=>typeof x==="string")));
+  return isRecord(v)&&typeof v.id==="string"&&Array.isArray(v.slots)&&v.slots.every(x=>isRecord(x))&&
+    (v.slotConstraints===undefined||Array.isArray(v.slotConstraints)&&v.slotConstraints.every(x=>isRecord(x)&&Number.isInteger(x.leftSlot)&&Number.isInteger(x.rightSlot)&&Array.isArray(x.allowedPairs)))&&
+    isRecord(v.meaning)&&typeof v.meaning.root==="string"&&Array.isArray(v.meaning.objects);
 }
-/** Do not pick the first form: a written word may have multiple senses and inflections. */
-function matchingSlotOptions(slot:SlotPattern,analyzed:AnalyzedToken):readonly LexicalOption[] {
-  if(slot.text!==undefined&&slot.text.toLowerCase()!==analyzed.token.normalized)return [];
+function matchSlot(slot:SlotPattern, analyzed:AnalyzedToken):readonly LexicalOption[] {
+  if(slot.text!==undefined && slot.text.toLowerCase()!==analyzed.token.normalized)return [];
   const requiresLex=!!(slot.classes?.length||slot.formKeys?.length||slot.conceptIds?.length||slot.lexemeIds?.length);
   if(!requiresLex)return [{lexemeId:"surface:literal",conceptId:"sem:literal",lexicalClass:"Literal",formKey:"citation"}];
-  const unique=new Map<string,LexicalOption>();
-  for(const option of analyzed.options){
-    if((slot.classes?.length&&!slot.classes.includes(option.lexicalClass))||
-       (slot.formKeys?.length&&!slot.formKeys.includes(option.formKey))||
-       (slot.conceptIds?.length&&!slot.conceptIds.includes(option.conceptId))||
-       (slot.lexemeIds?.length&&!slot.lexemeIds.includes(option.lexemeId)))continue;
-    const key=JSON.stringify([option.lexemeId,option.conceptId,option.lexicalClass,option.formKey]);
-    unique.set(key,option);
-  }
-  return [...unique].sort(([a],[b])=>a.localeCompare(b)).map(([,option])=>option);
+  return analyzed.options.filter(opt=>
+    (!slot.classes?.length||slot.classes.includes(opt.lexicalClass))&&
+    (!slot.formKeys?.length||slot.formKeys.includes(opt.formKey))&&
+    (!slot.conceptIds?.length||slot.conceptIds.includes(opt.conceptId))&&
+    (!slot.lexemeIds?.length||slot.lexemeIds.includes(opt.lexemeId)));
 }
-interface SyntaxMatches {readonly values:readonly SyntacticAnalysis[];readonly exceeded:boolean;}
-/** Constraint-aware backtracking; deterministic and bounded for adversarial homographs. */
-function matchSyntaxPatternsBounded(value:MorphAnalysis,patterns:readonly SyntaxPattern[],maxHypotheses:number):SyntaxMatches {
+
+/** Rules are ordinary persisted patterns. No language-specific syntax here. */
+export class SyntaxAnalysisBudgetExceeded extends Error {
+  constructor(limit:number){super(`Syntax analysis budget exceeded: more than ${limit} lexical hypotheses.`);this.name='SyntaxAnalysisBudgetExceeded';}
+}
+export function matchSyntaxPatterns(value:MorphAnalysis,patterns:readonly SyntaxPattern[],maxResults=1024):readonly SyntacticAnalysis[] {
+  if(!Number.isSafeInteger(maxResults)||maxResults<1)throw new RangeError('maxResults must be a positive integer.');
   const results:SyntacticAnalysis[]=[];
   for(const pattern of patterns){
     if(pattern.slots.length!==value.tokens.length)continue;
-    const available=pattern.slots.map((slot,i)=>matchingSlotOptions(slot,value.tokens[i]!));
-    if(available.some(options=>options.length===0))continue;
-    const chosen:LexicalOption[]=[];
-    const visit=(index:number):boolean=>{
-      if(index===available.length){
-        if(results.length>=maxHypotheses)return false;
-        const captures=Object.fromEntries(chosen.map((option,i)=>[String(i),{...option,token:value.tokens[i]!.token}]));
-        results.push({valueType:"SyntacticAnalysis",id:`${value.id}:syntax:${pattern.id}:reading:${results.length}`,rootId:pattern.meaning.root,
-          nodes:{[pattern.meaning.root]:{template:pattern.meaning,captures,patternId:pattern.id}}});
-        return true;
+    const choices:(readonly LexicalOption[])[]=[];
+    for(let i=0;i<pattern.slots.length;i++){
+      const options=matchSlot(pattern.slots[i]!,value.tokens[i]!);
+      if(!options.length)break;
+      choices.push(options);
+    }
+    if(choices.length!==pattern.slots.length)continue;
+    const enumerate=(i:number,captures:Record<string,unknown>)=>{
+      if(i===choices.length){
+        for(const rule of pattern.slotConstraints??[]){
+          const left=captures[String(rule.leftSlot)] as LexicalOption|undefined;
+          const right=captures[String(rule.rightSlot)] as LexicalOption|undefined;
+          if(!left||!right||!rule.allowedPairs.some(([a,b])=>a===left.formKey&&b===right.formKey))return;
+        }
+        if(results.length>=maxResults)throw new SyntaxAnalysisBudgetExceeded(maxResults);
+        results.push({valueType:"SyntacticAnalysis",id:`${value.id}:syntax:${pattern.id}:${results.length}`,rootId:pattern.meaning.root,nodes:{[pattern.meaning.root]:{template:pattern.meaning,captures,patternId:pattern.id}}});
+        return;
       }
-      for(const option of available[index]!){
-        chosen.push(option);
-        const allowed=(pattern.slotConstraints??[]).every(constraint=>{
-          if(constraint.leftSlot>=chosen.length||constraint.rightSlot>=chosen.length)return true;
-          return constraint.allowedPairs.some(([left,right])=>left===chosen[constraint.leftSlot]?.formKey&&right===chosen[constraint.rightSlot]?.formKey);
-        });
-        if(allowed&&!visit(index+1))return false;
-        chosen.pop();
-      }
-      return true;
+      for(const opt of choices[i]!)enumerate(i+1,{...captures,[String(i)]:{...opt,token:value.tokens[i]!.token}});
     };
-    if(!visit(0))return {values:[],exceeded:true};
+    enumerate(0,{});
   }
-  return {values:results,exceeded:false};
-}
-/** Every valid lexical reading survives until meaning analysis can distinguish it. */
-export function matchSyntaxPatterns(value:MorphAnalysis,patterns:readonly SyntaxPattern[]):readonly SyntacticAnalysis[] {
-  return matchSyntaxPatternsBounded(value,patterns,Number.POSITIVE_INFINITY).values;
+  return results;
 }
 
 export function makeMeaning(value:SyntacticAnalysis, formFeatureMap:Readonly<Record<string,Readonly<Record<string,Readonly<Record<string,unknown>>>>>>={}):{value?:SemanticGraphValue;diagnostics:readonly Diagnostic[]} {
@@ -283,11 +267,20 @@ export function registerAnalysisPrimitives(registry:NodeRegistry):void {
   }});
   registry.register({typeId:"analysis.match-pattern",inputs:[inPort("MorphAnalysis")],outputs:[outPort("SyntacticAnalysis",false)],evaluate:(_context,inputs,params)=>{
     if(!Array.isArray(params.patterns)||!params.patterns.every(isPattern))return {outputs:{value:[]},diagnostics:[failure("INVALID_ANALYSIS_PATTERNS","patterns must be an array of serializable syntax templates.")]};
-    const max=params.maxHypotheses===undefined?256:params.maxHypotheses;
-    if(!Number.isSafeInteger(max)||typeof max!=="number"||max<1)return {outputs:{value:[]},diagnostics:[failure("INVALID_ANALYSIS_LIMIT","maxHypotheses must be a positive integer.")]};
-    const matched=matchSyntaxPatternsBounded(inputs.value[0] as MorphAnalysis,params.patterns,max);
-    if(matched.exceeded)return {outputs:{value:[]},diagnostics:[failure("MAX_ANALYSIS_HYPOTHESES",`Analysis exceeded ${max} lexical interpretations. Narrow the grammar or increase maxHypotheses.`)]};
-    return {outputs:{value:matched.values},diagnostics:[]};
+    let fixed:readonly SyntacticAnalysis[];
+    try{fixed=matchSyntaxPatterns(inputs.value[0] as MorphAnalysis,params.patterns,typeof params.maxResults==='number'?params.maxResults:1024)}
+    catch(error){
+      if(error instanceof SyntaxAnalysisBudgetExceeded||error instanceof RangeError)
+        return {outputs:{value:[]},diagnostics:[failure('ANALYSIS_PARSE_BUDGET',error.message)]};
+      throw error;
+    }
+    if(fixed.length||params.compositionalGrammar===undefined)return {outputs:{value:fixed},diagnostics:[]};
+    const composed=composeSyntaxPatterns(inputs.value[0] as MorphAnalysis,params.compositionalGrammar as CompositionalGrammar);
+    return {outputs:{value:composed.analyses},diagnostics:composed.diagnostics};
+  }});
+  registry.register({typeId:'analysis.compose-grammar',inputs:[inPort('MorphAnalysis')],outputs:[outPort('SyntacticAnalysis',false)],evaluate:(_context,inputs,params)=>{
+    const composed=composeSyntaxPatterns(inputs.value[0] as MorphAnalysis,params.grammar as CompositionalGrammar);
+    return {outputs:{value:composed.analyses},diagnostics:composed.diagnostics};
   }});
   registry.register({typeId:"analysis.to-meaning",inputs:[inPort("SyntacticAnalysis")],outputs:[outPort("SemanticGraphValue",false)],evaluate:(_context,inputs,params)=>{
     const mapped=isRecord(params.formFeatureMap)?params.formFeatureMap as Record<string,Record<string,Record<string,unknown>>>:{};
